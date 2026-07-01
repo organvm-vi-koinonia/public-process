@@ -58,8 +58,10 @@ This isn't a confession and it isn't a shortcut. When Wilson brought in session 
 
 The full methodology is documented in [The Solo Auteur Method]({{ site.baseurl }}{% post_url 2026-02-18-the-solo-auteur-method %}).
 
-## How to Follow
+## How to Engage
 
+- **Community page**: Start with the [Community]({{ site.baseurl }}/community/) page for discussion paths, stranger-test feedback, and author contact
+- **Questions and discussion**: Open a [Question / Discussion issue](https://github.com/organvm/public-process/issues/new?template=question_discussion.md) for open-ended questions about essays, methodology, collaboration, or the organvm system
 - **RSS Feed**: Subscribe to [the feed]({{ site.baseurl }}/feed.xml) for new essays
 - **GitHub**: Follow the [organvm-v-logos](https://github.com/organvm-v-logos) organization for updates
 - **Meta-Organization**: The [meta-organvm](https://github.com/meta-organvm) organization contains the corpus and registry

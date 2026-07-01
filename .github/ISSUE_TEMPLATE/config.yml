@@ -1,5 +1,8 @@
 blank_issues_enabled: true
 contact_links:
+  - name: Ask a Question / Start a Discussion
+    url: https://github.com/organvm/public-process/issues/new?template=question_discussion.md
+    about: Open-ended questions about essays, methodology, collaboration, or the organvm system
   - name: ORGAN-V Governance Docs
     url: https://github.com/organvm/public-process/tree/main/docs
     about: Process architecture, dissertation SOP, and publication standards
