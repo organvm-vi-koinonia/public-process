@@ -38,6 +38,14 @@ These metrics are emitted in:
 - `data/system-engagement-report.json`
 - `data/weekly-signals.{json,md}`
 
+For the exact field-level schema and compatibility notes, use:
+- `docs/analytics-engine-data-contract.md`
+
 ## Governance
 
 New distribution channels must be added through a documented issue and reflected in campaign naming conventions.
+
+## Data Quality Notes
+
+- `analytics-engine` emits zeros/null-safe values when sources are unavailable, so consumers can keep dashboards and reports stable.
+- Attribution (`utm_*`) is optional, and low coverage is reported as a warning condition.
