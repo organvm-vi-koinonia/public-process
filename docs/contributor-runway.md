@@ -8,29 +8,42 @@ permalink: /docs/contributor-runway/
 
 This guide defines how first-time contributors can land meaningful changes quickly.
 
+## Repository Type
+
+`public-process` is a Jekyll static site. Most first contributions are not application-code changes; they are small Markdown, frontmatter, documentation, link, Liquid template, HTML, CSS, YAML, or JSON-data fixes.
+
+| Area | Language / format | Good first scope |
+|------|-------------------|------------------|
+| `_posts/` | Markdown + YAML frontmatter | Fix metadata, links, excerpts, or formatting |
+| `_logs/` | Markdown + YAML frontmatter | Fix log formatting or internal references |
+| `docs/` | Markdown, YAML | Clarify process docs or governance references |
+| `_layouts/`, `_includes/` | Liquid, HTML | Small template accessibility or structure fixes |
+| `assets/` | CSS | Narrow styling fixes |
+| `data/` | JSON | Generated index updates requested by CI |
+
 ## Fast Start
 
-1. Clone `public-process`. This is the first repo to use for Public Process
-   reading, local preview, and doc/content contributions:
+1. Clone `public-process` and install Jekyll dependencies:
 
 ```bash
 git clone https://github.com/organvm/public-process.git
 cd public-process
 gem install bundler:4.0.3
 bundle install
-bundle exec jekyll serve --host 127.0.0.1
 ```
 
-2. Open `http://127.0.0.1:4000/public-process/`.
-3. Read [`docs/quick-start.md`](quick-start.md) if the organ names or repo
-   boundaries are unclear.
-4. Pick a scoped issue labeled `good first issue`.
-5. Run the local build before opening a PR:
+2. Pick a scoped issue labeled [`good first issue`](https://github.com/organvm/public-process/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22).
+3. Run the local build before opening a PR:
 
 ```bash
 bundle exec jekyll build --strict_front_matter --future
 ```
 
+4. If the issue list has no starter tasks, open the [First Contribution issue template](https://github.com/organvm/public-process/issues/new?template=first_contribution.md) and propose a small Markdown, documentation, frontmatter, link, or Jekyll-template cleanup.
+
+## Starter Issue Labels
+
+Starter issues should use `good first issue` and name the relevant repository surface in the title or body, for example `_posts`, `docs`, `Liquid`, `CSS`, `frontmatter`, or `links`. This makes the required language or file format visible before a contributor opens the issue.
 
 The CI also validates frontmatter, regenerated data files, internal links, and
 basic repository structure.
