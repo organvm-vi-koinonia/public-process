@@ -60,10 +60,14 @@ Maintainers should label starter tasks `good first issue` and include the releva
 
 ### Reporting Issues
 
-- Use GitHub Issues for bug reports and feature requests
-- Use the provided issue templates when available
+- Use **Quick Issue** when you just need to report friction, ask a question, or
+  file a documentation gap.
+- Use the specific bug, feature, first-contribution, or stranger-test templates
+  only when that structure helps.
 - Include clear reproduction steps for bugs
 - For documentation issues, specify which file and section
+- Architecture/navigation confusion is useful feedback. If you cannot find the
+  system diagram you expected, open a Quick Issue and name the path you tried.
 
 ### Making Changes
 
