@@ -756,6 +756,92 @@ tr:hover td {
   margin-top: 0.5em;
 }
 
+/* --- Design System Specimens --- */
+.design-token-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.5em 0;
+}
+
+.design-token {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25em 0.75em;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.8em;
+}
+
+.design-token span:last-child {
+  color: var(--muted);
+  font-size: 0.85em;
+}
+
+.design-swatch {
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  grid-row: span 2;
+}
+
+.design-swatch-bg { background: var(--bg); }
+.design-swatch-surface { background: var(--surface); }
+.design-swatch-fg { background: var(--fg); }
+.design-swatch-muted { background: var(--muted); }
+.design-swatch-accent { background: var(--accent); }
+.design-swatch-border { background: var(--border); }
+
+.design-specimen {
+  background: rgba(22, 27, 34, 0.68);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1em 0 1.5em;
+}
+
+.design-specimen > :first-child {
+  margin-top: 0;
+}
+
+.design-specimen > :last-child {
+  margin-bottom: 0;
+}
+
+.design-nav-example {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 1.1em;
+  margin-bottom: 1em;
+}
+
+.design-flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.design-flow span {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: #e6edf3;
+  font-size: 0.85em;
+  padding: 0.7em 0.5em;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .design-token-grid,
+  .design-flow {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 400px) {
   body {
     font-size: 0.95em;
