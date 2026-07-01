@@ -71,6 +71,7 @@ bundle exec jekyll build --strict_front_matter --future
 
 > Building in public: the methodology, cross-validation cycle, and lessons learned from coordinating ~79 repositories across 8 GitHub organizations using AI agents as an ensemble of specialized reviewers.
 
+<<<<<<< HEAD
 [Quick Start](docs/quick-start.md) | [Product Orientation](#product-orientation) | [Technical Architecture](docs/architecture.md) | [Community](https://organvm.github.io/public-process/community/) | [Ask a Question](https://github.com/organvm/public-process/issues/new?template=question_discussion.md) | [RSS](https://organvm.github.io/public-process/feed.xml) | [Introduction](#introduction) | [The Eight-Organ Model](#the-eight-organ-model) | [Methodology](#methodology) | [The Cross-Validation Cycle](#the-cross-validation-cycle) | [Per-Agent Findings](#per-agent-findings) | [Synthesis](#synthesis) | [Simulating Organizational Scale](#simulating-organizational-scale-in-solo-practice) | [Lessons Learned](#lessons-learned) | [Cross-References](#cross-references)
 
 ## Community and Discussion
@@ -81,9 +82,33 @@ methodology, collaboration, or the wider organvm system, open a
 or visit the [Community page](https://organvm.github.io/public-process/community/).
 There is no Discord or Slack workspace for this repository right now; public
 conversation happens on GitHub so the thread stays part of the process record.
+||||||| parent of c31dc73 ([STRANGER-TEST] Session 2: Technical Writer)
+New here? Start with [Quick Start](docs/quick-start.md). Clone this repo first:
+
+```bash
+git clone https://github.com/organvm/public-process.git
+cd public-process
+gem install bundler:4.0.3
+bundle install
+bundle exec jekyll serve --host 127.0.0.1
+```
+
+Then open `http://127.0.0.1:4000/public-process/`. The Greek-named repositories
+are upstream organ projects; this repository is the public essay site that
+explains the system.
+
+[Quick Start](docs/quick-start.md) | [Product Orientation](#product-orientation) | [Introduction](#introduction) | [The Eight-Organ Model](#the-eight-organ-model) | [Methodology](#methodology) | [The Cross-Validation Cycle](#the-cross-validation-cycle) | [Per-Agent Findings](#per-agent-findings) | [Synthesis](#synthesis) | [Simulating Organizational Scale](#simulating-organizational-scale-in-solo-practice) | [Lessons Learned](#lessons-learned) | [Cross-References](#cross-references)
+=======
+This repository is ORGAN-V's public essay site. The complete dated essay corpus
+lives in `_posts/`, curated long-form essays live in `essays/`, and contributor
+guidance starts in [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+[Quick Start](docs/quick-start.md) | [Product Orientation](#product-orientation) | [Introduction](#introduction) | [The Eight-Organ Model](#the-eight-organ-model) | [Methodology](#methodology) | [The Cross-Validation Cycle](#the-cross-validation-cycle) | [Per-Agent Findings](#per-agent-findings) | [Synthesis](#synthesis) | [Simulating Organizational Scale](#simulating-organizational-scale-in-solo-practice) | [Lessons Learned](#lessons-learned) | [Cross-References](#cross-references)
+>>>>>>> c31dc73 ([STRANGER-TEST] Session 2: Technical Writer)
 
 ---
 
+<<<<<<< HEAD
 ## Contributor Quick Map
 
 **Stack:** Jekyll static site, Ruby 3.3, Bundler, Markdown with YAML frontmatter, Liquid templates, HTML/CSS, and generated JSON/YAML data.
@@ -94,6 +119,25 @@ conversation happens on GitHub so the thread stays part of the process record.
 
 ---
 
+||||||| parent of c31dc73 ([STRANGER-TEST] Session 2: Technical Writer)
+## Product Orientation
+
+If you are evaluating this as a product system, start here:
+
+| Need | Start Here |
+|------|------------|
+| Understand the current roadmap and milestones | [Roadmap](roadmap.md) |
+| Identify maintainers and review ownership | [CODEOWNERS](.github/CODEOWNERS) and [Contributing](CONTRIBUTING.md) |
+| See corpus health and publication metrics | [Dashboard](dashboard.md) |
+| Understand how essays connect to repositories | [Connections](connections.md) |
+| Understand contribution workflow | [Contributor Runway](docs/contributor-runway.md) |
+
+Maintainer: [@4444J99](https://github.com/4444J99). System governance is coordinated through ORGAN-IV and the meta-organvm registry; this repository owns ORGAN-V public-process outputs: essay Markdown, essay index data, and RSS.
+
+---
+
+=======
+>>>>>>> c31dc73 ([STRANGER-TEST] Session 2: Technical Writer)
 ## Introduction
 
 This essay documents the process of building and launching an eight-organ creative-institutional system — a coordinated architecture of ~79 GitHub repositories across 8 organizations — using AI agents not as code generators but as **specialized reviewers in a cross-validation ensemble**.

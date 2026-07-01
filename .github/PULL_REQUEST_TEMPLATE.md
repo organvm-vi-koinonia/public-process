@@ -16,8 +16,10 @@
 
 <!-- How did you test these changes? Mark unavailable checks as N/A. -->
 
-- [ ] `bundle exec jekyll build --strict_front_matter --future` passes
+- [ ] Docs-only change previewed and self-reviewed
+- [ ] `bundle exec jekyll build --strict_front_matter --future` passes for content/layout/config changes
 - [ ] Full workspace validation passes if available (`../validate.sh`)
+- [ ] CI data-drift checks considered for `_posts/` or `_logs/` changes
 - [ ] New tests added (if applicable)
 - [ ] Manual testing performed
 

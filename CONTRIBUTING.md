@@ -1,15 +1,21 @@
 # Contributing to public-process
 
-Thank you for your interest in contributing to this project.
+Thank you for helping improve `public-process`.
 
-## Overview
+This repository is the essay site for the organvm system. If you came here
+looking for essays, you are in the right place.
 
-Public Process is the essay publication platform for the organvm system. It is a Jekyll blog that hosts essays about building in public, creative systems, autonomous infrastructure, and the philosophy behind the eight-organ model. Essays are written in Markdown with YAML frontmatter.
+## Quick Orientation
 
-**Stack:** Jekyll blog, Ruby, Markdown essays
+- Complete dated essay corpus: `_posts/YYYY-MM-DD-slug.md`
+- Curated long-form essay collection: `essays/meta-system/` and
+  `essays/subsidiary/`
+- Site pages: `index.md`, `about.md`, `reading.md`, `dashboard.md`
+- Generated indexes and feeds: `data/`
+- Jekyll configuration: `_config.yml`, `_layouts/`, `_includes/`
 
 If you are new to the system, read the [Quick Start](docs/quick-start.md)
-before cloning any other ORGANVM repo.
+before cloning any other ORGANVM repo. For most writing and editing work, start in `_posts/` or `essays/`.
 
 ## Repository Map
 
@@ -23,32 +29,42 @@ before cloning any other ORGANVM repo.
 | `data/` | JSON | Generated index data; update only when validation asks for it |
 ## Prerequisites
 
-- Git
-- Ruby 3.3.x (see `.ruby-version`)
-- Bundler 4.0.3 (see `Gemfile.lock`)
-- A GitHub account
+## Terms Used Here
 
-## Development Setup
+| Term | Plain meaning |
+|------|---------------|
+| `public-process` | This repository: the public essay and methodology site. |
+| Organ V / Logos | The part of organvm responsible for essays, public process, and explanation. |
+| organvm | The broader eight-organ project this site documents. |
+| Essay | A Markdown file with a short YAML metadata block at the top. |
+| Frontmatter | The YAML metadata block between `---` lines at the top of an essay. |
+| Stranger Test | A check that a first-time reader can understand the purpose, status, and next step without private context. |
+| PR | Pull request: the GitHub review request for your proposed change. |
+
+## Good First Contributions
+
+- Fix a typo, broken link, confusing sentence, or stale cross-reference.
+- Clarify an essay introduction or section heading.
+- Improve onboarding docs such as this file.
+- Add missing metadata only when the expected value is clear from nearby files.
+- Draft a new essay only when there is an issue or maintainer note defining the scope.
+
+Keep first changes small and easy to review. A useful one-paragraph correction is
+better than a broad rewrite that mixes many decisions.
+
+## Setup
+
+For docs-only edits, GitHub's web editor is enough. For local preview or changes
+to essays, layouts, includes, or configuration, use the Jekyll setup:
 
 ```bash
-# Clone the canonical repo or your fork
 git clone https://github.com/organvm/public-process.git
 cd public-process
-
-# Ensure Homebrew Ruby/Bundler are first on PATH (macOS/Homebrew)
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-
-# Install Ruby dependencies
-gem install bundler:4.0.3
 bundle install
-
-# Serve locally
 bundle exec jekyll serve --host 127.0.0.1
-
-# Site available at http://127.0.0.1:4000/public-process/
 ```
 
-## How to Contribute
+The local site is available at `http://127.0.0.1:4000/public-process/`.
 
 ### Finding a First Issue
 
@@ -69,46 +85,60 @@ Maintainers should label starter tasks `good first issue` and include the releva
 - Architecture/navigation confusion is useful feedback. If you cannot find the
   system diagram you expected, open a Quick Issue and name the path you tried.
 
-### Making Changes
+## Making a Change
 
-1. **Fork** the repository on GitHub
-2. **Clone** your fork locally
-3. **Create a branch** for your change:
+1. Fork the repository on GitHub.
+2. Create a branch for the change:
+
    ```bash
-   git checkout -b feat/your-feature-name
+   git checkout -b docs/clarify-contributor-guide
    ```
-4. **Make your changes** following the code style guidelines below
-5. **Test** your changes:
+
+3. Make the smallest useful edit.
+4. Run the check that matches the change.
+5. Commit with a short, imperative message:
+
    ```bash
    bundle exec jekyll build --strict_front_matter --future
+   git commit -m "clarify contributor guide"
    ```
-6. **Commit** with a clear, imperative-mood message:
-   ```bash
-   git commit -m "add validation for edge case in parser"
-   ```
-7. **Push** your branch and open a Pull Request
 
-### Code Style
+6. Open a pull request and link the related issue when there is one.
 
-Essays use Markdown with YAML frontmatter (title, date, categories, tags, excerpt). Follow the existing essay style: clear prose, specific examples, honest reflection. Filenames follow Jekyll convention: YYYY-MM-DD-slug.md in _posts/.
+## Checks to Run
 
-### Commit Messages
+Use the lowest check that actually covers your change:
 
-- Use imperative mood: "add feature" not "added feature"
-- Keep the title under 72 characters
-- Reference issue numbers when applicable: "fix auth bug (#42)"
-- Keep commits atomic and focused on a single change
+| Change type | Local check |
+|-------------|-------------|
+| Root docs such as `README.md`, `CONTRIBUTING.md`, or `docs/*.md` | Preview the Markdown and self-review links. |
+| Essays, logs, layouts, includes, or `_config.yml` | `bundle exec jekyll build --strict_front_matter --future` |
+| `_posts/` or `_logs/` content that changes generated indexes | Run the Jekyll build, then expect CI to verify frontmatter, links, and `data/` drift. |
 
-## Pull Request Process
+CI also runs the shared `essay-pipeline` and `editorial-standards` repositories
+for frontmatter validation, internal link checks, and generated data drift. If
+CI reports drift in `data/`, regenerate the data artifacts or ask for maintainer
+help in the PR.
 
-1. Fill out the PR template with a description of your changes
-2. Reference any related issues
-3. Ensure all CI checks pass
-4. Request review from a maintainer
-5. Address review feedback promptly
+## Writing Style
 
-PRs should be focused — one feature or fix per PR. Large changes should be
-discussed in an issue first.
+Essays should be clear, specific, and honest about process. Prefer concrete
+examples over abstract claims. Keep filenames in the Jekyll format
+`YYYY-MM-DD-slug.md` when adding a dated post.
+
+When editing existing essays, preserve the author's voice. Improve clarity
+without flattening the argument.
+
+## Pull Request Expectations
+
+- Explain what changed and why.
+- Link the issue or feedback session when applicable.
+- Summarize the checks you ran.
+- Keep each PR focused on one correction, essay, or documentation improvement.
+- Do not commit secrets, credentials, API keys, tokens, or private data.
+
+Large changes are welcome, but they should start as an issue so scope and
+review expectations are clear before the work begins.
 
 ## Code of Conduct
 
@@ -117,8 +147,7 @@ Be respectful, constructive, and honest. This project is part of the
 and building in public. We follow the
 [Contributor Covenant](https://www.contributor-covenant.org/).
 
-## Questions?
+## Questions
 
-Open an issue on this repository or start a discussion if discussions are
-enabled. For system-wide questions, see
+Open an issue on this repository. For system-wide questions, see
 [orchestration-start-here](https://github.com/organvm-iv-taxis/orchestration-start-here).
