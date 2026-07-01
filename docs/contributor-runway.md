@@ -31,6 +31,9 @@ bundle exec jekyll serve --host 127.0.0.1
 bundle exec jekyll build --strict_front_matter --future
 ```
 
+
+The CI also validates frontmatter, regenerated data files, internal links, and
+basic repository structure.
 ## First Contribution Scope
 
 A first contribution should:
