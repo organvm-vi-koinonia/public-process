@@ -55,6 +55,7 @@ jobs:
         run: |
           python -m src.indexer \
             --posts-dir ../_posts/ \
+            --logs-dir ../_logs/ \
             --output-dir ../data/
           cd ..
           if git diff --quiet data/; then
