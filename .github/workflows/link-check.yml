@@ -15,7 +15,7 @@ jobs:
       - name: Checkout essay-pipeline
         uses: actions/checkout@v6
         with:
-          repository: organvm/essay-pipeline
+          repository: organvm-v-logos/essay-pipeline
           path: _pipeline
 
       - name: Set up Python

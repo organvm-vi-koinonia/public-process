@@ -17,13 +17,13 @@ jobs:
       - name: Checkout essay-pipeline
         uses: actions/checkout@v6
         with:
-          repository: organvm/essay-pipeline
+          repository: organvm-v-logos/essay-pipeline
           path: _pipeline
 
       - name: Checkout editorial-standards
         uses: actions/checkout@v6
         with:
-          repository: organvm/editorial-standards
+          repository: organvm-v-logos/editorial-standards
           path: _standards
 
       - name: Set up Ruby
