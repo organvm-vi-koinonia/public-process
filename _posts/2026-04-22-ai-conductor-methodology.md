@@ -74,13 +74,7 @@ The AI produces volume. A 3,000-word README. A 400-line validation script. A JSO
 
 The key principle of the generation phase is: **let the AI be prolific, then curate.** Don't interrupt generation to correct small errors. Don't micro-manage sentence structure. Let the draft exist, then evaluate it as a whole.
 
-<<<<<<< HEAD
 In the ORGANVM system, generation sprints produced extraordinary volume: the Silver Sprint generated ~404,000+ words of README documentation across 147 repositories in a single session. No individual document was perfect, but the structural consistency was high because every generation was governed by the same directive template.
-||||||| 905f85c
-In the ORGANVM system, generation sprints produced extraordinary volume: the Silver Sprint generated ~404,000+ words of README documentation across 147 repositories in a single session. No individual document was perfect, but the structural consistency was high because every generation was governed by the same directive template.
-=======
-In the ORGANVM system, generation sprints produced extraordinary volume: the Silver Sprint generated ~404,000+ words of README documentation across 147 repositories in a single session. No individual document was perfect, but the structural consistency was high because every generation was governed by the same directive template.
->>>>>>> 058f269af2f5047a7873ae1949e64979f558ca81
 
 ### Phase 3: Refinement
 
@@ -190,13 +184,7 @@ Second, sprints create natural review checkpoints. At the end of each sprint, th
 
 Third, sprint names serve as an organizational memory aid. When I need to find when a particular decision was made or why a particular artifact exists, I can search by sprint name. "The revenue field was split during VERITAS" is more navigable than "the revenue field was changed on February 13th."
 
-<<<<<<< HEAD
 The sprint model also provides a natural vocabulary for communicating about AI-conductor work to external audiences. Instead of saying "I spent a week generating documentation," I can say "the PROPULSION sprint produced 404,000+ words of README documentation across 147 repositories, followed by the ASCENSION sprint which validated 1,267 links and 62 dependency edges." The sprint structure makes the work legible as a planned, executed, and validated process rather than a chaotic burst of AI generation.
-||||||| 905f85c
-The sprint model also provides a natural vocabulary for communicating about AI-conductor work to external audiences. Instead of saying "I spent a week generating documentation," I can say "the PROPULSION sprint produced 404,000+ words of README documentation across 147 repositories, followed by the ASCENSION sprint which validated 1,267 links and 62 dependency edges." The sprint structure makes the work legible as a planned, executed, and validated process rather than a chaotic burst of AI generation.
-=======
-The sprint model also provides a natural vocabulary for communicating about AI-conductor work to external audiences. Instead of saying "I spent a week generating documentation," I can say "the PROPULSION sprint produced 404,000+ words of README documentation across 147 repositories, followed by the ASCENSION sprint which validated 1,267 links and 62 dependency edges." The sprint structure makes the work legible as a planned, executed, and validated process rather than a chaotic burst of AI generation.
->>>>>>> 058f269af2f5047a7873ae1949e64979f558ca81
 
 **Naming matters more than you'd think.** I chose Latin-derived sprint names (IGNITION, PROPULSION, VERITAS, OPERATIO) partly for aesthetic reasons and partly because distinctive names are easier to reference than numbered iterations. "Sprint 7" is forgettable; "ALCHEMIA" is memorable and searchable. This is a small thing, but in a system with fourteen sprints across a week, the naming convention paid for itself in cognitive overhead savings.
 
