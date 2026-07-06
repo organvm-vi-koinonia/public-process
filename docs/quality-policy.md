@@ -26,11 +26,13 @@ This document defines minimum quality guarantees for changes merged into `public
 Before opening a PR:
 
 ```bash
-./tools/bootstrap_dev.sh
-./validate.sh
+bundle install
+bundle exec jekyll build --strict_front_matter --future
 ```
 
-If `validate.sh` fails, treat it as a release blocker.
+If the Jekyll build fails, treat it as a release blocker. CI also runs
+cross-repo editorial and generated-data checks that may require follow-up when
+they fail.
 
 ## Exceptions
 

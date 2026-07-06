@@ -17,7 +17,7 @@ Where is the relevant code/content? Link files or sections.
 ## Definition of Done
 
 - [ ] Concrete acceptance criteria are listed
-- [ ] Required checks to run are listed (`validate.sh`, repo tests, etc.)
+- [ ] Required checks to run are listed, usually `bundle exec jekyll build --strict_front_matter --future`
 - [ ] Scope fits a first contribution (<1 day focused work)
 
 ## Constraints

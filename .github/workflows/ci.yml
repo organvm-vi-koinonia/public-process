@@ -55,15 +55,51 @@ jobs:
         run: |
           python -m src.indexer \
             --posts-dir ../_posts/ \
+            --logs-dir ../_logs/ \
             --output-dir ../data/
           cd ..
-          if git diff --quiet data/; then
-            echo "::notice::Data files are up to date"
-          else
-            echo "::error::Data files are out of date — run the indexer locally and commit the result"
-            git diff --stat data/
-            exit 1
-          fi
+          python - <<'PY'
+          import json
+          import subprocess
+          import sys
+          from pathlib import Path
+
+          changed = subprocess.check_output(
+              ["git", "diff", "--name-only", "--", "data/"],
+              text=True,
+          ).splitlines()
+
+          semantic_drift = []
+          timestamp_only = []
+          for name in changed:
+              path = Path(name)
+              if path.suffix != ".json" or not path.exists():
+                  semantic_drift.append(name)
+                  continue
+              try:
+                  before = json.loads(
+                      subprocess.check_output(["git", "show", f"HEAD:{name}"], text=True)
+                  )
+                  after = json.loads(path.read_text())
+              except Exception:
+                  semantic_drift.append(name)
+                  continue
+              before.pop("updated", None)
+              after.pop("updated", None)
+              if before == after:
+                  timestamp_only.append(name)
+              else:
+                  semantic_drift.append(name)
+
+          if semantic_drift:
+              print("::error::Data files are out of date — run the indexer locally and commit the result")
+              subprocess.run(["git", "diff", "--stat", "--", *semantic_drift], check=False)
+              sys.exit(1)
+          if timestamp_only:
+              print("::notice::Data drift is limited to generated updated timestamps")
+          else:
+              print("::notice::Data files are up to date")
+          PY
 
       - name: Check internal links
         working-directory: _pipeline
