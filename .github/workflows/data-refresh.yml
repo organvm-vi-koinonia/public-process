@@ -18,13 +18,13 @@ jobs:
       - name: Checkout essay-pipeline
         uses: actions/checkout@v6
         with:
-          repository: organvm-v-logos/essay-pipeline
+          repository: organvm/essay-pipeline
           path: essay-pipeline
 
       - name: Checkout editorial-standards
         uses: actions/checkout@v6
         with:
-          repository: organvm-v-logos/editorial-standards
+          repository: organvm/editorial-standards
           path: editorial-standards
 
       - name: Set up Python
