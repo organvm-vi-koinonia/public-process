@@ -55,13 +55,14 @@ jobs:
         run: |
           python -m src.indexer \
             --posts-dir ../_posts/ \
+            --logs-dir ../_logs/ \
             --output-dir ../data/
           cd ..
-          if git diff --quiet data/; then
-            echo "::notice::Data files are up to date"
+          if git diff -I '^[[:space:]]*"updated":' --quiet data/; then
+            echo "::notice::Data files are up to date apart from generated timestamps"
           else
             echo "::error::Data files are out of date — run the indexer locally and commit the result"
-            git diff --stat data/
+            git diff -I '^[[:space:]]*"updated":' --stat data/
             exit 1
           fi
 
