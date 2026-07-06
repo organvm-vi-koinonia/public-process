@@ -10,8 +10,8 @@ portfolio_relevance: "HIGH"
 related_repos:
   - meta-organvm/organvm-corpvs-testamentvm
   - organvm-iv-taxis/orchestration-start-here
-reading_time: "17 min"
-word_count: 4322
+reading_time: "16 min"
+word_count: 4070
 references: []
 ---
 
