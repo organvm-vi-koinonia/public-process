@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Contributor Runway"
+permalink: /docs/contributor-runway/
+---
+
 # Contributor Runway
 
 This guide defines how first-time contributors can land meaningful changes quickly.

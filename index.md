@@ -9,6 +9,12 @@ Essays about building an eight-organ creative-institutional system. Theory, art,
 
 ---
 
+## Product Orientation
+
+New to the system? Start with the [Roadmap]({{ site.baseurl }}/roadmap/) for the current product surfaces, milestones, maintainers, and how this decoupled set of organs composes into one product system. Then use the [Dashboard]({{ site.baseurl }}/dashboard/) for corpus metrics and the [Connections map]({{ site.baseurl }}/connections/) for essay-to-repository links.
+
+---
+
 {% assign idx = site.data["essays-index"] %}
 <div class="stat-grid">
   <div class="stat">

@@ -28,7 +28,23 @@ Then open `http://127.0.0.1:4000/public-process/`. The Greek-named repositories
 are upstream organ projects; this repository is the public essay site that
 explains the system.
 
-[Quick Start](docs/quick-start.md) | [Introduction](#introduction) | [The Eight-Organ Model](#the-eight-organ-model) | [Methodology](#methodology) | [The Cross-Validation Cycle](#the-cross-validation-cycle) | [Per-Agent Findings](#per-agent-findings) | [Synthesis](#synthesis) | [Simulating Organizational Scale](#simulating-organizational-scale-in-solo-practice) | [Lessons Learned](#lessons-learned) | [Cross-References](#cross-references)
+[Quick Start](docs/quick-start.md) | [Product Orientation](#product-orientation) | [Introduction](#introduction) | [The Eight-Organ Model](#the-eight-organ-model) | [Methodology](#methodology) | [The Cross-Validation Cycle](#the-cross-validation-cycle) | [Per-Agent Findings](#per-agent-findings) | [Synthesis](#synthesis) | [Simulating Organizational Scale](#simulating-organizational-scale-in-solo-practice) | [Lessons Learned](#lessons-learned) | [Cross-References](#cross-references)
+
+---
+
+## Product Orientation
+
+If you are evaluating this as a product system, start here:
+
+| Need | Start Here |
+|------|------------|
+| Understand the current roadmap and milestones | [Roadmap](roadmap.md) |
+| Identify maintainers and review ownership | [CODEOWNERS](.github/CODEOWNERS) and [Contributing](CONTRIBUTING.md) |
+| See corpus health and publication metrics | [Dashboard](dashboard.md) |
+| Understand how essays connect to repositories | [Connections](connections.md) |
+| Understand contribution workflow | [Contributor Runway](docs/contributor-runway.md) |
+
+Maintainer: [@4444J99](https://github.com/4444J99). System governance is coordinated through ORGAN-IV and the meta-organvm registry; this repository owns ORGAN-V public-process outputs: essay Markdown, essay index data, and RSS.
 
 ---
 
