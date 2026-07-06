@@ -4,16 +4,23 @@ This guide defines how first-time contributors can land meaningful changes quick
 
 ## Fast Start
 
-1. Clone with submodules and run bootstrap:
+1. Clone the repository and install the Ruby dependencies:
 
 ```bash
-git clone --recurse-submodules <repo-url>
-cd organvm-v-logos
-./tools/bootstrap_dev.sh
+git clone https://github.com/organvm/public-process.git
+cd public-process
+bundle install
 ```
 
 2. Pick a scoped issue labeled `good first issue`.
-3. Run `./validate.sh` before opening a PR.
+3. Run the local build before opening a PR:
+
+```bash
+bundle exec jekyll build --strict_front_matter --future
+```
+
+The CI also validates frontmatter, regenerated data files, internal links, and
+basic repository structure.
 
 ## First Contribution Scope
 
@@ -33,9 +40,10 @@ A first contribution should:
 ## Required PR Evidence
 
 - What changed and why.
-- Validation output summary.
+- Validation output summary, including the Jekyll build command above.
 - Linked issue with acceptance criteria.
 
 ## Escalation
 
-If blocked for >7 days without review, open a `documentation` issue in `organvm-v-logos/.github` with link to the PR and blocker details.
+If blocked for >7 days without review, open a `documentation` issue in this
+repository with a link to the PR and blocker details.

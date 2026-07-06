@@ -1,16 +1,73 @@
-# How I Used 4 AI Agents to Cross-Validate an Eight-Organ System
+# Public Process (ORGAN-V Logos)
 
-[![CI](https://github.com/organvm-v-logos/public-process/actions/workflows/ci.yml/badge.svg)](https://github.com/organvm-v-logos/public-process/actions/workflows/ci.yml)
-[![Coverage](https://img.shields.io/badge/coverage-pending-lightgrey)](https://github.com/organvm-v-logos/public-process)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/organvm-v-logos/public-process/blob/main/LICENSE)
-[![Organ V](https://img.shields.io/badge/Organ-V%20Logos-3B82F6)](https://github.com/organvm-v-logos)
-[![Status](https://img.shields.io/badge/status-active-brightgreen)](https://github.com/organvm-v-logos/public-process)
-[![Jekyll](https://img.shields.io/badge/lang-Jekyll-informational)](https://github.com/organvm-v-logos/public-process)
+[![CI](https://github.com/organvm/public-process/actions/workflows/ci.yml/badge.svg)](https://github.com/organvm/public-process/actions/workflows/ci.yml)
+[![Coverage](https://img.shields.io/badge/coverage-pending-lightgrey)](https://github.com/organvm/public-process)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/organvm/public-process/blob/main/LICENSE)
+[![Organ V](https://img.shields.io/badge/Organ-V%20Logos-3B82F6)](https://github.com/organvm)
+[![Status](https://img.shields.io/badge/status-active-brightgreen)](https://github.com/organvm/public-process)
+[![Jekyll](https://img.shields.io/badge/lang-Jekyll-informational)](https://github.com/organvm/public-process)
 
 
-[![ORGAN-V: Public Process](https://img.shields.io/badge/ORGAN--V-Public%20Process-00695c?style=flat-square)](https://github.com/organvm-v-logos)
+[![ORGAN-V: Public Process](https://img.shields.io/badge/ORGAN--V-Public%20Process-00695c?style=flat-square)](https://github.com/organvm/public-process)
 [![Status](https://img.shields.io/badge/status-draft--in--progress-yellow?style=flat-square)]()
 [![License](https://img.shields.io/badge/license-CC%20BY--SA%204.0-blue?style=flat-square)](LICENSE)
+
+Public Process is the publication site for ORGANVM. In concrete terms, this
+repository is a Jekyll blog that ships essays, dissertation pages, a generated
+essay index, and an RSS feed for the rest of the system and outside readers.
+
+## What ORGAN-V Does
+
+ORGAN-V turns work happening across the ORGANVM system into public artifacts:
+
+- **Essays and methodology notes** in `_posts/` and `essays/`.
+- **Long-form dissertation pages** in `_dissertations/`.
+- **A public website** built from `index.md`, `about.md`, `_layouts/`, `_includes/`,
+  and `assets/css/style.css`.
+- **Machine-readable publishing data** in `data/essays-index.json` and related
+  `data/*.json` files.
+- **Distribution surfaces** through `feed.xml`, GitHub Pages, and downstream
+  community/marketing organs.
+
+If you are a frontend developer, treat this as a content-heavy Jekyll site:
+layout, navigation, accessibility, CSS, Markdown structure, and data-backed
+content lists are all valid contribution surfaces.
+
+## Greek Names in Plain English
+
+| Name | Plain-English role |
+|------|--------------------|
+| Theoria | Theory and knowledge foundations |
+| Poiesis | Art, generative systems, and performance |
+| Ergon | Products, services, and commerce |
+| Taxis | Governance, routing, and orchestration |
+| Logos / ORGAN-V | Public writing, methodology, and publication |
+| Koinonia | Community, salons, and reading groups |
+| Kerygma | Marketing, announcements, and distribution |
+| Meta | Registry, constitution, and system-wide coordination |
+
+## Quick Contribution Paths
+
+- Fix unclear public documentation in `README.md`, `about.md`, or `docs/`.
+- Improve homepage navigation or content hierarchy in `index.md`.
+- Adjust site layout in `_layouts/` and `_includes/`.
+- Improve responsive or accessible styling in `assets/css/style.css`.
+- Add or correct essay metadata in Markdown frontmatter.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) and
+[docs/contributor-runway.md](docs/contributor-runway.md) for setup and PR
+expectations.
+
+## Local Validation
+
+```bash
+bundle install
+bundle exec jekyll build --strict_front_matter --future
+```
+
+---
+
+## Featured Process Essay
 
 > Building in public: the methodology, cross-validation cycle, and lessons learned from coordinating ~79 repositories across 8 GitHub organizations using AI agents as an ensemble of specialized reviewers.
 

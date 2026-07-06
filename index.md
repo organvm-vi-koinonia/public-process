@@ -7,6 +7,27 @@ title: "Public Process"
 
 Essays about building an eight-organ creative-institutional system. Theory, art, commerce, orchestration, community, marketing, and the meta-system that connects them all.
 
+## Start Here
+
+In plain language, ORGAN-V is the writing and publishing layer of ORGANVM. It
+takes project work from the rest of the system and turns it into public essays,
+methodology notes, dissertation pages, an RSS feed, and machine-readable essay
+indexes.
+
+For developers, this repository is a Jekyll site. The main contribution surfaces
+are Markdown content, Liquid layouts, includes, CSS, accessibility, navigation,
+and generated publishing data.
+
+| If you see this name | Read it as |
+|----------------------|------------|
+| Logos / ORGAN-V | Public writing and publication |
+| Theoria | Theory and knowledge foundations |
+| Poiesis | Art and generative systems |
+| Ergon | Products and commerce |
+| Taxis | Governance and orchestration |
+| Koinonia | Community |
+| Kerygma | Marketing and distribution |
+
 ---
 
 {% assign idx = site.data["essays-index"] %}
