@@ -8,6 +8,9 @@ Public Process is the essay publication platform for the organvm system. It is a
 
 **Stack:** Jekyll blog, Ruby, Markdown essays
 
+If you are new to the system, read the [Quick Start](docs/quick-start.md)
+before cloning any other ORGANVM repo.
+
 ## Prerequisites
 
 - Git
@@ -18,8 +21,8 @@ Public Process is the essay publication platform for the organvm system. It is a
 ## Development Setup
 
 ```bash
-# Clone your fork
-git clone https://github.com/YOUR_USERNAME/public-process.git
+# Clone the canonical repo or your fork
+git clone https://github.com/organvm/public-process.git
 cd public-process
 
 # Ensure Homebrew Ruby/Bundler are first on PATH (macOS/Homebrew)
@@ -30,9 +33,9 @@ gem install bundler:4.0.3
 bundle install
 
 # Serve locally
-bundle exec jekyll serve
+bundle exec jekyll serve --host 127.0.0.1
 
-# Site available at http://localhost:4000
+# Site available at http://127.0.0.1:4000/public-process/
 ```
 
 ## How to Contribute
@@ -55,7 +58,7 @@ bundle exec jekyll serve
 4. **Make your changes** following the code style guidelines below
 5. **Test** your changes:
    ```bash
-   bundle exec jekyll build --strict_front_matter
+   bundle exec jekyll build --strict_front_matter --future
    ```
 6. **Commit** with a clear, imperative-mood message:
    ```bash
