@@ -3,7 +3,7 @@
   "updated": "2026-07-06",
   "generated_by": "essay-pipeline indexer v0.3.0",
   "total_essays": 65,
-  "total_words": 175691,
+  "total_words": 175439,
   "categories": {
     "meta-system": 24,
     "case-study": 13,
@@ -1155,9 +1155,9 @@
         "creative-systems",
         "organvm"
       ],
-      "word_count": 4322,
-      "readability_score": 64.9,
-      "reading_time": "17 min",
+      "word_count": 4070,
+      "readability_score": 65.2,
+      "reading_time": "16 min",
       "portfolio_relevance": "HIGH"
     },
     {
