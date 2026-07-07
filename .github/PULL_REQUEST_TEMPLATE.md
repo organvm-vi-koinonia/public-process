@@ -16,7 +16,6 @@
 
 <!-- How did you test these changes? -->
 
-- [ ] `../validate.sh` passes from workspace root
 - [ ] `bundle exec jekyll build --strict_front_matter --future` passes
 - [ ] New tests added (if applicable)
 - [ ] Manual testing performed
