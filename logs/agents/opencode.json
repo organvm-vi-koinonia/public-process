@@ -1,0 +1,11 @@
+{
+  "agent": "opencode",
+  "status": "idle",
+  "accepting_tasks": true,
+  "available_tokens": 45983279,
+  "available_pct": 92.0,
+  "current_task_id": "HEAL-cifix-organvm-public-process-31",
+  "heartbeat": "2026-07-07T00:23:58.936956+00:00",
+  "token_usage_pct": 8.03,
+  "clock_health": "ok"
+}
