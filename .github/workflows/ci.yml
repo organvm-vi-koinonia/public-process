@@ -12,16 +12,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout public-process
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Checkout essay-pipeline
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: organvm-v-logos/essay-pipeline
           path: _pipeline
 
       - name: Checkout editorial-standards
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: organvm-v-logos/editorial-standards
           path: _standards
