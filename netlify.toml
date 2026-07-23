@@ -1,0 +1,12 @@
+# This site deploys to two targets: GitHub Pages at organvm.github.io/public-process/
+# (which needs the Jekyll `baseurl: "/public-process"` set in _config.yml) and Netlify
+# at the ROOT domain public-process.netlify.app. With baseurl set, every stylesheet and
+# nav link is emitted as `/public-process/...`, which 404s on the Netlify root — the site
+# renders as unstyled raw HTML. Netlify reads this file from the repo root directly
+# (Jekyll ignores `_`-prefixed files like `_redirects`, so a redirects file would never
+# ship). The 200 rewrite serves the real root-level asset for any `/public-process/*`
+# request, fixing Netlify without disturbing the Pages subpath deploy.
+[[redirects]]
+  from = "/public-process/*"
+  to = "/:splat"
+  status = 200
