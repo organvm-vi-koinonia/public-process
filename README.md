@@ -84,6 +84,16 @@ conversation happens on GitHub so the thread stays part of the process record.
 
 ---
 
+## Contributor Quick Map
+
+**Stack:** Jekyll static site, Ruby 3.3, Bundler, Markdown with YAML frontmatter, Liquid templates, HTML/CSS, and generated JSON/YAML data.
+
+**Primary contribution surfaces:** essays in `_posts/`, historical logs in `_logs/`, site pages at the repository root, layouts/includes in `_layouts/` and `_includes/`, and process documentation in `docs/`.
+
+**Good first issue path:** start with the [`good first issue` query](https://github.com/organvm/public-process/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22). If that list is empty, use the [First Contribution issue template](https://github.com/organvm/public-process/issues/new?template=first_contribution.md) to request or propose a scoped Markdown, documentation, or Jekyll cleanup task. See [CONTRIBUTING.md](CONTRIBUTING.md) and the [Contributor Runway](docs/contributor-runway.md).
+
+---
+
 ## Introduction
 
 This essay documents the process of building and launching an eight-organ creative-institutional system — a coordinated architecture of ~79 GitHub repositories across 8 organizations — using AI agents not as code generators but as **specialized reviewers in a cross-validation ensemble**.

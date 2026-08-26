@@ -11,6 +11,16 @@ Public Process is the essay publication platform for the organvm system. It is a
 If you are new to the system, read the [Quick Start](docs/quick-start.md)
 before cloning any other ORGANVM repo.
 
+## Repository Map
+
+| Surface | Main language / format | Typical contribution |
+|---------|------------------------|----------------------|
+| `_posts/` | Markdown + YAML frontmatter | Essay corrections, metadata fixes, link repair |
+| `_logs/` | Markdown + YAML frontmatter | Historical log cleanup and indexing fixes |
+| `docs/` | Markdown, YAML | Process documentation and governance references |
+| `_layouts/`, `_includes/` | Liquid, HTML | Template and page-structure fixes |
+| `assets/` | CSS, static assets | Styling and presentation fixes |
+| `data/` | JSON | Generated index data; update only when validation asks for it |
 ## Prerequisites
 
 - Git
@@ -39,6 +49,14 @@ bundle exec jekyll serve --host 127.0.0.1
 ```
 
 ## How to Contribute
+
+### Finding a First Issue
+
+1. Check the open [`good first issue` list](https://github.com/organvm/public-process/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22).
+2. If no starter issue is available, open the [First Contribution template](https://github.com/organvm/public-process/issues/new?template=first_contribution.md) with a small proposed scope.
+3. Good first contributions in this repository are usually Markdown, frontmatter, internal-link, documentation, or small Jekyll template fixes.
+
+Maintainers should label starter tasks `good first issue` and include the relevant surface from the repository map above so contributors can tell whether the work is Markdown, Ruby/Jekyll, Liquid/HTML, CSS, YAML, or JSON.
 
 ### Reporting Issues
 
