@@ -9,30 +9,23 @@ assignees: ""
 ## Session Metadata
 
 - Date:
-- Session type: (live / async)
 - Participant profile:
 
 ## Tasks Attempted
 
-List each task and whether it succeeded.
+List the task and result. One task is enough.
 
-1. Task:
-   Result: ✅ / ❌
-2. Task:
-   Result: ✅ / ❌
+- Task:
+- Result:
 
 ## Friction Points
 
-What blocked, confused, or slowed the participant?
+What blocked, confused, or slowed the participant? Plain language is enough.
 
 ## Trust Signals
 
 What increased or decreased confidence in the project?
 
-## Recommended Changes
+## Evidence or Suggested Fix
 
-Concrete, testable changes this feedback suggests.
-
-## Evidence
-
-Links/screenshots/logs (if available and consented).
+Links, screenshots, logs, or a suggested fix if available.
