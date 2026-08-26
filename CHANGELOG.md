@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Public roadmap page with maintainer ownership, milestones, and product-system orientation for stranger-test follow-up.
 - Community page, navigation links, and a Question / Discussion issue template for public interaction paths
+- Design system reference page documenting `organ-aesthetic.yaml` and visual UI component specimens
 - Platinum Sprint: CI/CD workflow, standardized badge row, ADR documentation
 - Initial CHANGELOG following Keep a Changelog format
 
