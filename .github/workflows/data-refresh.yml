@@ -36,33 +36,36 @@ jobs:
         run: pip install -e essay-pipeline/
 
       - name: Validate essays
+        working-directory: essay-pipeline
         run: |
           python -m src.validator \
-            --posts-dir _posts/ \
-            --schema editorial-standards/schemas/frontmatter-schema.yaml
+            --posts-dir ../_posts/ \
+            --schema ../editorial-standards/schemas/frontmatter-schema.yaml
 
       - name: Validate logs
+        working-directory: essay-pipeline
         run: |
-          if [ -d "_logs" ] && [ -n "$(ls -A _logs/*.md 2>/dev/null)" ]; then
+          if [ -d "../_logs" ] && [ -n "$(ls -A ../_logs/*.md 2>/dev/null)" ]; then
             python -m src.validator \
-              --posts-dir _logs/ \
-              --schema editorial-standards/schemas/log-schema.yaml \
+              --posts-dir ../_logs/ \
+              --schema ../editorial-standards/schemas/log-schema.yaml \
               --content-type log
           else
             echo "No logs to validate"
           fi
 
       - name: Regenerate data artifacts
+        working-directory: essay-pipeline
         run: |
           LOGS_ARG=""
-          if [ -d "_logs" ] && [ -n "$(ls -A _logs/*.md 2>/dev/null)" ]; then
-            LOGS_ARG="--logs-dir _logs/"
+          if [ -d "../_logs" ] && [ -n "$(ls -A ../_logs/*.md 2>/dev/null)" ]; then
+            LOGS_ARG="--logs-dir ../_logs/"
           fi
 
           python -m src.indexer \
-            --posts-dir _posts/ \
+            --posts-dir ../_posts/ \
             $LOGS_ARG \
-            --output-dir data/
+            --output-dir ../data/
 
       - name: Commit refreshed data
         run: |
