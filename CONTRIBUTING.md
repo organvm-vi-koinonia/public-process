@@ -68,8 +68,8 @@ The local site is available at `http://127.0.0.1:4000/public-process/`.
 
 ### Finding a First Issue
 
-1. Check the open [`good first issue` list](https://github.com/organvm/public-process/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22).
-2. If no starter issue is available, open the [First Contribution template](https://github.com/organvm/public-process/issues/new?template=first_contribution.md) with a small proposed scope.
+1. Check the open [`good first issue` list](https://github.com/organvm-vi-koinonia/public-process/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22).
+2. If no starter issue is available, open the [First Contribution template](https://github.com/organvm-vi-koinonia/public-process/issues/new?template=first_contribution.md) with a small proposed scope.
 3. Good first contributions in this repository are usually Markdown, frontmatter, internal-link, documentation, or small Jekyll template fixes.
 
 Maintainers should label starter tasks `good first issue` and include the relevant surface from the repository map above so contributors can tell whether the work is Markdown, Ruby/Jekyll, Liquid/HTML, CSS, YAML, or JSON.

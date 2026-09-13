@@ -78,8 +78,8 @@ For a product manager, the important invariant is that Public Process is not the
 - Check the [Dashboard]({{ site.baseurl }}/dashboard/) for corpus metrics.
 - Use the [Connections map]({{ site.baseurl }}/connections/) to see how essays refer to repositories.
 - Review [Contributor Runway]({{ site.baseurl }}/docs/contributor-runway/) for contribution expectations.
-- Open the [GitHub issue template](https://github.com/organvm-v-logos/public-process/blob/main/.github/ISSUE_TEMPLATE/stranger_test_feedback.md) to run another stranger test.
+- Open the [GitHub issue template](https://github.com/organvm-vi-koinonia/public-process/blob/main/.github/ISSUE_TEMPLATE/stranger_test_feedback.md) to run another stranger test.
 
 ## Evidence for This Roadmap
 
-This page was added in response to GitHub issue [organvm/public-process#17](https://github.com/organvm/public-process/issues/17), where a Product Manager stranger-test participant could identify maintainers but could not understand the roadmap from the public profile.
+This page was added in response to GitHub issue [organvm/public-process#17](https://github.com/organvm-vi-koinonia/public-process/issues/17), where a Product Manager stranger-test participant could identify maintainers but could not understand the roadmap from the public profile.

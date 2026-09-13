@@ -80,6 +80,9 @@ jobs:
       - name: Check public artifact boundary
         run: python scripts/check_public_output.py output
 
+      - name: Verify canonical output
+        run: python scripts/check_canonical_output.py
+
       - name: Record source and artifact manifest
         run: python scripts/release_manifest.py
 

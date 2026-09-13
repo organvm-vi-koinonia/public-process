@@ -61,7 +61,7 @@ The full methodology is documented in [The Solo Auteur Method]({{ site.baseurl }
 ## How to Engage
 
 - **Community page**: Start with the [Community]({{ site.baseurl }}/community/) page for discussion paths, stranger-test feedback, and author contact
-- **Questions and discussion**: Open a [Question / Discussion issue](https://github.com/organvm/public-process/issues/new?template=question_discussion.md) for open-ended questions about essays, methodology, collaboration, or the organvm system
+- **Questions and discussion**: Open a [Question / Discussion issue](https://github.com/organvm-vi-koinonia/public-process/issues/new?template=question_discussion.md) for open-ended questions about essays, methodology, collaboration, or the organvm system
 - **RSS Feed**: Subscribe to [the feed]({{ site.baseurl }}/feed.xml) for new essays
 - **GitHub**: Follow the [organvm-v-logos](https://github.com/organvm-v-logos) organization for updates
 - **Meta-Organization**: The [meta-organvm](https://github.com/meta-organvm) organization contains the corpus and registry
@@ -69,7 +69,7 @@ The full methodology is documented in [The Solo Auteur Method]({{ site.baseurl }
 
 ## License and Attribution
 
-All essays in Public Process are published under the [MIT License](https://github.com/organvm-v-logos/public-process/blob/main/LICENSE). You are free to share, adapt, and build upon this work with attribution.
+All essays in Public Process are published under the [MIT License](https://github.com/organvm-vi-koinonia/public-process/blob/main/LICENSE). You are free to share, adapt, and build upon this work with attribution.
 
 The organvm system as a whole is documented in the [Corpus Testamentum](https://github.com/meta-organvm/organvm-corpvs-testamentvm), which contains the complete planning, audit, and implementation record.
 

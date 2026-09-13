@@ -5,7 +5,7 @@
 **Please do not report security vulnerabilities through public GitHub issues,
 discussions, or pull requests.**
 
-Instead, please use [GitHub Security Advisories](https://github.com/organvm-v-logos/public-process/security/advisories/new)
+Instead, please use [GitHub Security Advisories](https://github.com/organvm-vi-koinonia/public-process/security/advisories/new)
 to report vulnerabilities privately. This allows us to assess the risk and
 prepare a fix before public disclosure.
 
