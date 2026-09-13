@@ -1,0 +1,371 @@
+{
+  "baseline_sha": "be78cc9f39cd9e6413e2417b25cd6f47d89f8f38",
+  "records": [
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "F0",
+      "name": "Approved weekly preservation (shipped)",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        55
+      ],
+      "verdict_card": "### F0 — Approved weekly preservation (shipped)\n- Members: PR46 and `docs/preserve-weekly-accomplishments-2026-09-11`.\n- Intention: preserve the three approved accomplishments with attribution and evidence boundaries.\n- Status: already present on default, merged 2026-09-13T14:33:11Z.\n- Evidence: main commit is PR46 squash; two-tree diff between source head and current main is empty.\n- Finish line: existing source preservation satisfied; published runtime receipt belongs to separate delivery check.\n- Next action: record current deployment/publication receipt. Risk if abandoned: merged/published distinction gets lost.\n- Close/delete allowed?: source branch is technically eligible after recorded verdict, but no deletion performed or needed."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "F1",
+      "name": "Generated-artifact/checkout CI repair family (primary operational successor)",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        53,
+        54,
+        56,
+        64
+      ],
+      "verdict_card": "### F1 — Generated-artifact/checkout CI repair family (primary operational successor)\n- Members: open PR45; merged repair PR36,37,38,39; all six `limen/heal-cifix-*` branches; `fix-pr31`; `limen/gh-organvm-public-process-13-62ee-preserve`; `pr-28`. Source content donor intentions F3/F4 must survive separately.\n- Intention: trustworthy reproducible validator/indexer execution with generated outputs current; preserve captured checkout residue.\n- Shared root: generated-data execution contract was fragmented across checkout paths, missing logs input, volatile timestamps, mutable sibling checkouts, ad hoc index refreshes, and capture commits. This produced repeated symptom repairs across unrelated content PRs.\n- Status: needs-heal / amalgamation planning; #45 is the active work carrier, not safe to call complete from historical CI alone.\n- Evidence: commits explicitly say “fix failing CI” across #27–31; main structural JSON comparator exists, but weekly refresh still invokes modules from root and directly pushes default. #45 addresses working directory only.\n- Unique residue: `d9973332`, `77c2f8bb`, and `e2f804a4` gitlink/capture patches match existing main patches; `745ba893` agent-log addition also patch-equivalent. `d6723709` CI differs from current mainly by older setup-python plus punctuation. `a95c705b` proposes an older line-oriented timestamp comparator, superseded by structural JSON comparison. Do not reintroduce it. `fix-pr31` and preserved #13 histories carry contributor-doc edits; route those to F3. `pr-28` carries student docs; route to F4.\n- Finish line: one cross-workflow path/data contract; clean-checkout regressions; deterministic semantic data drift; refresh proposals via PR not direct trunk pushes; exact-head review + default/scheduled receipts; independent link-check blocker explicitly owned.\n- Next action: reconcile PR45 clean-checkout regression and document donor residue before deciding any additional successor patch.\n- Abandonment risk: scheduled refresh remains broken while generic PR CI looks green; repeating CI-fix branches; accidental reintegration of stale workflow code.\n- Close/delete allowed?: NO. Existing merged members retained pending family evidence, live #45 not closed."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "F2",
+      "name": "Content-integrity / contributor runway synchronization family",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        56,
+        64
+      ],
+      "verdict_card": "### F2 — Content-integrity / contributor runway synchronization family\n- Members: PR5 and PR6; `feat/content-integrity-and-runway`, `chore/merge-feat-20260305`; downstream #7/#8 lineage.\n- Intention: normalize corpus metadata, strict Jekyll/data checks, first-contribution/stranger-test guidance, instrumentation and quality policies.\n- Shared root: one exact code change was represented as feature and bulk-sync PRs; stale automation closed both without a written technical verdict.\n- Status: duplicate-of at code-head level (#6→#5), completion/residue audit required against #8 and current default.\n- Evidence: both refs equal `f0a3c9f072`; only closure comments are stale notices. Current default has core hook/policies; old docs still prescribe nonexistent `./validate.sh`, whereas current docs explicitly corrected that false instruction.\n- Finish line: every original intended capability mapped to verified current equivalent or an owned residual question; no old metadata/docs regressed.\n- Next action: compare original diff and comment intent against #8 and later corrections, retaining any unique contribution/runway requirement.\n- Abandonment risk: loss of early contributor and quality-policy rationale or blind remerge of obsolete commands.\n- Close/delete allowed?: NO until residue ledger; exact shared head permits deduplicated queue, not deletion."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "F3",
+      "name": "Junior-developer first-contact path",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        64,
+        56
+      ],
+      "verdict_card": "### F3 — Junior-developer first-contact path\n- Members: merged PR31, `limen/gh-organvm-public-process-13-62ee`; contributor-doc residue in F1 snapshots.\n- Intention: make README/index/contributor runway actionable to a new developer and remove misleading acceptance requirements.\n- Status: merged core, residual donor reconciliation.\n- Evidence: commit `322c8eab` patch-equivalent on main; whole old branch still contains historical CI attempts.\n- Finish line: stranger-test criteria verifiably true on current site and no unique donor requirement lost.\n- Next action: compare donor README/runway changes with current docs; cite present acceptance evidence.\n- Abandonment risk: silently lose user-friction findings.\n- Close/delete allowed?: NO pending donor comparison."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "F4",
+      "name": "Student quick-start path",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        64,
+        56
+      ],
+      "verdict_card": "### F4 — Student quick-start path\n- Members: merged PR28, `limen/gh-organvm-public-process-18-1b24`; `pr-28` capture donor in F1.\n- Intention: accessible quick-start, contributing/pitch quality-policy explanations and first-contribution path.\n- Status: merged core; historical capture residue requires record.\n- Evidence: source adds `docs/quick-start.md` plus first-contribution and README improvements; capture-only gitlink patch is already equivalent on main.\n- Finish line: current quick-start completes with accurate available commands and reader navigation; all student findings mapped.\n- Next action: verify current quick-start paths without resurrecting old generated JSON.\n- Abandonment risk: first-time readers receive dead-end instructions.\n- Close/delete allowed?: NO pending current evidence."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "F5",
+      "name": "Product-manager roadmap visibility",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        10,
+        56,
+        64
+      ],
+      "verdict_card": "### F5 — Product-manager roadmap visibility\n- Members: merged PR33, `limen/gh-organvm-public-process-17-1446`.\n- Intention: public roadmap discoverability and trustworthy content frontmatter after conflict-marker/word-count repairs.\n- Status: merged core, terminal verification pending.\n- Evidence: changes include `roadmap.md`, header/index links, an essay conflict repair and matching index update.\n- Finish line: every roadmap promise reconciled into current issue plan; no conflict markers or frontmatter/index mismatch.\n- Next action: main planning inventory should map `roadmap.md` and historical roadmap lineage.\n- Abandonment risk: parallel contradictory roadmaps.\n- Close/delete allowed?: NO until evidence mapping."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "F6",
+      "name": "Analytics-consumer data contract",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        61,
+        66
+      ],
+      "verdict_card": "### F6 — Analytics-consumer data contract\n- Members: merged PR27, `limen/gh-organvm-public-process-20-14d8`.\n- Intention: documented analytics fields/compatibility and distribution instrumentation data-quality notes.\n- Status: merged core; live-data truth unproven.\n- Evidence: substantive commit `f9700812` patch-equivalent on main; trailing re-index commit is not itself evidence of live analytics.\n- Finish line: documented source/field contracts matched to fresh, provenance-marked data; missing sources distinct from measured zero.\n- Next action: reconcile published contract with actual ingestion/consumer evidence in roadmap.\n- Abandonment risk: attractive dashboard/documentation mistaken for live measured engagement.\n- Close/delete allowed?: NO until live-data/contract verification."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "F7",
+      "name": "Community question/intake route",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        64,
+        65
+      ],
+      "verdict_card": "### F7 — Community question/intake route\n- Members: merged PR32, `limen/gh-organvm-public-process-21-c57c`.\n- Intention: visible community entry, question template, README/about/header/footer guidance.\n- Status: merged core; operational response ownership not demonstrated.\n- Evidence: source adds `community.md` and `question_discussion.md`; repository metadata has discussions=false, so issue-based intake is real surface.\n- Finish line: questions land in an owned, usable channel with clear reader expectations.\n- Next action: validate current community links and intake ownership, not assume GitHub Discussions is enabled.\n- Abandonment risk: audience interest arrives at an unstaffed/dead channel.\n- Close/delete allowed?: NO until verification."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "F8",
+      "name": "Captured agent-context rewrite",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        56,
+        57
+      ],
+      "verdict_card": "### F8 — Captured agent-context rewrite\n- Members: `wip/preserve-2026-05-31-public-process` at `6245b727`.\n- Intention: preserve working-tree updates to AGENTS/CLAUDE/GEMINI; no linked PR.\n- Status: parked / requires adjudication.\n- Evidence: 27 additions/197 deletions across three files; AGENTS change is sync timestamp; CLAUDE/GEMINI remove substantial context.\n- Finish line: useful context migrated to current instruction contract; removed instructions individually accounted for.\n- Next action: compare captured agent instructions against authoritative generated context; do not merge merely because it is a backup.\n- Abandonment risk: loss of genuine local operational instructions; blind merge risks erasing context.\n- Close/delete allowed?: NO."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "F9",
+      "name": "Historical action-upgrade closure family",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        55,
+        56
+      ],
+      "verdict_card": "### F9 — Historical action-upgrade closure family\n- Members: closed-unmerged PR2,3,4,41; actual successors #12/#26/#44.\n- Intention: keep action runtime/dependency versions supported.\n- Shared root: fleet-wide version-update disable followed by later re-enable/group updates left older closed heads behind; #41 superseded bot proposal.\n- Status: candidate superseded-by listed successors, not reopened.\n- Evidence: main checkout/setup-python v7 and upload-pages-artifact v5; no corresponding living branch.\n- Finish line: path-by-path upgrade coverage and compatibility evidenced in successor/default; closure rationale ledger links old PRs.\n- Next action: verify successor diffs and checks before declaring zero residue.\n- Abandonment risk: governance loses why dependency proposals closed.\n- Close/delete allowed?: already closed; no further deletion/state change necessary."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "F10",
+      "name": "Surfaced-items contract publication",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        56,
+        61
+      ],
+      "verdict_card": "### F10 — Surfaced-items contract publication\n- Members: closed-unmerged PR7; merged successor PR8.\n- Intention: publish surfaced-items data contract, README linkage and generated artifacts.\n- Status: candidate superseded-by #8.\n- Evidence: #8 title explicitly merges eval-growth-contract-sync branch, merged March25 2026; #7 review enumerates quality gates/policies/data sync.\n- Finish line: surfaced-items contract present, coherent with current reader pipeline, all unique #7 review points accounted for.\n- Next action: map contract to current plan; verify source-tree/aggregate diff because squash ancestry counts alone cannot establish equivalence.\n- Abandonment risk: undocumented data consumers and orphaned provenance.\n- Close/delete allowed?: already closed; preserve record.\n\n## Queue implications (planning only)\n\n1. Wave0/F1: stop scheduled/contract failures, establish PR-gated generated data and exact-head proof. Do not treat source PR45 ready merely from 15-day-old CI.\n2. Wave1/F2 + F3/F4 + F8: recover historical content/instruction residue; one family slot per actual shared cause, not per branch.\n3. Wave1 verification/F0/F5/F6/F7/F9/F10: record merged-versus-live and successor proofs, map remaining questions into current roadmap.\n4. No new `develop` or standing lanes warranted by existing topology. `main` only standing today; working branches should own issue-level intentions, not carry every operational category.\n5. No intention conclusively illogical. Some old implementations would regress current workflow versions, semantic drift logic or corrected commands if blindly merged; park those patches while preserving useful intent.\n\n## Evidence gaps\n\n- PR45 path-specific regression, live scheduled refresh result, independent redirect-defect owner and post-merge check unverified.\n- Protection metadata is not a ruleset/administrative audit.\n- Full semantic equivalence of historical merged/squashed donor branches remains a planned question except exact tree/patch proofs explicitly stated.\n- Unpushed work outside the accessible workspace cannot be declared inventoried.\n- No business/production-readiness percentage follows from this inventory.\n\n## Additional historical lineage proof\n\nRead-only fetch of PR7/8 source objects establishes stronger F2/F10 evidence:\n\n- Original feature head `f0a3c9f072c52ce1e89faaefe04c73380644b437` is an ancestor of PR7 head `de8153bcdc71e6ccb3140d559709df9de9e364d3`.\n- PR8 head `eec9a0dee6c9319a92ce1f950259ebdf3133b619` has exactly the same tree as its merged squash `3737f7b82ca61bd73ce367ae345464a69fcda84d`.\n- PR7 head versus that merged squash differs only in `.github/dependabot.yml`, `AGENTS.md`, `CLAUDE.md`, and `GEMINI.md`; surfaced-items contract, feature policy/validation changes, corpus and data are included. Context/dependency modifications reflect intervening history and still deserve recorded disposition.\n- PR41 head versus current main has no differences in its three touched workflows: `ci.yml`, `data-refresh.yml`, `link-check.yml`. Its implementation is therefore already represented on default; superseded-by #44 is supported at touched-file level.\n\nThese are semantic/source-tree proofs, not claims that all current public-runtime acceptance criteria have been executed.\n\n## C. Complete pre-plan open issue inventory\n\n| Issue | Intention / type | Created / age | Labels | Assignee / milestone | Existing work / verification gap |\n| --- | --- | --- | --- | --- | --- |\n| #10 | activation umbrella | 2026-06-10 / 95d | activation-audit, ship-soon | none / none | PR46; current CI/Pages receipts; versioning still open |\n| #13 | reader purpose / chore | 2026-06-18 / 87d | none | none / none | PR31 + preserved contributor donors; README/runway |\n| #14 | writer contribution / chore | 2026-06-18 / 87d | none | none / none | CONTRIBUTING + first-contribution docs |\n| #15 | architecture + templates / chore | 2026-06-18 / 87d | none | none / none | docs/architecture.md + issue templates |\n| #16 | contributor onboarding / chore | 2026-06-18 / 87d | none | none / none | first-contribution guide; label catalog not verified |\n| #17 | roadmap discoverability / tracking | 2026-06-18 / 87d | none | none / none | PR33 + roadmap.md |\n| #18 | quick start / chore | 2026-06-18 / 87d | none | none / none | PR28 + quick-start; pr-28 capture donor |\n| #19 | design guidance / question | 2026-06-18 / 87d | none | none / none | aesthetic config/guidance; screenshot/journey evidence unverified |\n| #20 | analytics contract / question | 2026-06-18 / 87d | none | none / none | PR27 + analytics/distribution contracts; stale artifact mismatch |\n| #21 | community + RSS / feature question | 2026-06-18 / 87d | none | none / none | PR32 + community.md + issue question template; Discussions disabled |\n| #22 | private reporting / security question | 2026-06-18 / 87d | none | none / none | SECURITY.md; canonical private channel ownership unverified |"
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "I0",
+      "name": "Activation truth (#10)",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        10
+      ],
+      "verdict_card": "### I0 — Activation truth (#10)\n\n- Recovered intention: the original audit requested a user-facing path, release metadata and a smoke test.\n- Evidence quote: historical body says “built-never-deployed”; current exact-head deployment receipt supersedes that diagnosis, but not every activation criterion.\n- Status: active; reuse #10 as the single roadmap anchor.\n- Finish line: accepted publication maturity gates have evidence, ownership and reproducible release/correction paths.\n- Next: reconcile current release/readback/version evidence; do not invent package manifests or backdate releases.\n- Risk if abandoned: stale failed-shipping claim persists despite deployment, or deployment alone is mistaken for operational maturity.\n- Close/delete allowed?: NO."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "I1",
+      "name": "Stranger-test evidence closure family (#13–#22)",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        64
+      ],
+      "verdict_card": "### I1 — Stranger-test evidence closure family (#13–#22)\n\n- Members: all ten issues in the table, with distinct acceptance rows retained.\n- Recovered intention: make purpose, contribution, architecture, first tasks, roadmap, quick start, design, data and community/security routes understandable.\n- Evidence quote: every original issue ends “Evidence / None.” Historical descriptions must not be presented as independently observed research.\n- Shared root: repeated observer templates and generic follow-up contracts lack current, reproducible acceptance receipts; several requested documents have since shipped.\n- Status: needs-heal / one successor acceptance matrix; no ten independent cosmetic rewrites.\n- Finish line: every member's concrete journey is satisfied on default and the live site, or its external/profile-repo portion is explicitly outside scope and owned as a reference.\n- Next: reproduce current journeys, map PR27/28/31/32/33 and donor residue, then choose the smallest missing class fix.\n- Risk if abandoned: repeated duplicate docs, invented participant evidence and unjustified closures.\n- Close/delete allowed?: NO. Link members `amalgamated-into:#N`; close only after successor is verified on default AND the individual row passes. Already-shipped docs are not themselves evidence that a participant succeeded.\n\n## D. Hidden work — complete tracked scope and family verdicts\n\nTracked content: 65 posts, 459 logs, 16 curated essays, 16 dissertation chapters, 463 data files, 13 docs, seven workflows, one research file, one agent log, four pillar templates and one explicit agent plan. Root has 32 tracked records including required Jekyll/configuration/community entry points. The intentional `_posts` / `essays` dual layout is not duplicate clutter.\n\nTask-marker scans covered tracked operational documents and publication directories. Historical prose TODO/WIP mentions are not automatically runnable tasks. The published worktree example is not proof of an abandoned worktree. No active handoff file was found in the inspected snapshot. Discussions are disabled; no separate discussion-task inventory is available there. No open Dependabot/Renovate PR exists in the exhaustive PR listing; historic action updates are family F9.\n\nDefault CI and Pages pass at the cutoff; scheduled refresh and historical link-health failures are separate paths, not disproved by that green. Public historical receipts: [module-import failure](https://github.com/organvm-vi-koinonia/public-process/actions/runs/32622589492), [link/report failure](https://github.com/organvm-vi-koinonia/public-process/actions/runs/32707568174). No new production writes or scheduled run were triggered."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "H1",
+      "name": "Publication gate / dependency family",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        55
+      ],
+      "verdict_card": "### H1 — Publication gate / dependency family\n\n- Members / evidence: ci.yml, pages.yml, data-refresh.yml, auto-merge.yml; _pipeline/_standards gitlinks.\n- Recovered intention: Exact-head validated artifact, all content types, pinned dependency contract and PR-gated refresh; inspect failed or absent evidence before changing gates.\n- Shared root / why grouped: Parallel workflows have different build flags, corpus checks, checkout identities and release conditions.\n- Status: needs-heal.\n- Finish line / next smallest action: Exact-head validated artifact, all content types, pinned dependency contract and PR-gated refresh; inspect failed or absent evidence before changing gates.\n- Risk if abandoned: Red or unapproved content can ship despite an unrelated green run.\n- Close/delete allowed?: NO. Preserve sources; any supersession requires a verdict and proof of no unique residue."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "H2",
+      "name": "Canonical identity / root / dependency layout",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        58
+      ],
+      "verdict_card": "### H2 — Canonical identity / root / dependency layout\n\n- Members / evidence: _config.yml, README, CONTRIBUTING, SECURITY, seed.yaml; no tracked .gitmodules.\n- Recovered intention: Approved canonical identity and old→new path/permalink map; validate root entry points and reproducible setup without content loss.\n- Shared root / why grouped: Owner/domain references and local/CI dependency layouts drifted across migrations.\n- Status: needs-heal.\n- Finish line / next smallest action: Approved canonical identity and old→new path/permalink map; validate root entry points and reproducible setup without content loss.\n- Risk if abandoned: Broken links or relocations invalidate public records.\n- Close/delete allowed?: NO. Preserve sources; any supersession requires a verdict and proof of no unique residue."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "H3",
+      "name": "Legacy product-template purpose drift",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        56
+      ],
+      "verdict_card": "### H3 — Legacy product-template purpose drift\n\n- Members / evidence: docs/staging-reference.md; docs/seed-automation-contract.yaml; ecosystem/pillar-dna/*.yaml.\n- Recovered intention: Recover useful provenance and applicable operating questions; explicitly supersede misfiled product assumptions without implementing them here.\n- Shared root / why grouped: API-gateway/SDK/SaaS templates prescribe absent surfaces inconsistent with the static-publication architecture.\n- Status: parked.\n- Finish line / next smallest action: Recover useful provenance and applicable operating questions; explicitly supersede misfiled product assumptions without implementing them here.\n- Risk if abandoned: Blind implementation invents a different product; deletion loses history.\n- Close/delete allowed?: NO. Preserve sources; any supersession requires a verdict and proof of no unique residue."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "H4",
+      "name": "Live metrics contract / freshness",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        66
+      ],
+      "verdict_card": "### H4 — Live metrics contract / freshness\n\n- Members / evidence: data/engagement-metrics.json; docs/analytics-engine-data-contract.md.\n- Recovered intention: Provenance-marked live source versus unknown/stale/zero/test states; validate actual field contract before setting growth targets.\n- Shared root / why grouped: February artifact predates March contract, has different keys and describes analytics as planned.\n- Status: needs-heal.\n- Finish line / next smallest action: Provenance-marked live source versus unknown/stale/zero/test states; validate actual field contract before setting growth targets.\n- Risk if abandoned: Placeholder data becomes a false audience/business claim.\n- Close/delete allowed?: NO. Preserve sources; any supersession requires a verdict and proof of no unique residue."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "H5",
+      "name": "Real topic intake",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        61
+      ],
+      "verdict_card": "### H5 — Real topic intake\n\n- Members / evidence: data/surfaced.json = []; docs/data-contract-surfaced-items.md.\n- Recovered intention: Choose one approved source and prove freshness, deduplication and schema; document dependency ownership only.\n- Shared root / why grouped: Upstream intake contract exists without one observed source-to-consumer receipt here.\n- Status: blocked.\n- Finish line / next smallest action: Choose one approved source and prove freshness, deduplication and schema; document dependency ownership only.\n- Risk if abandoned: An empty or regenerated index is mislabeled live intake.\n- Close/delete allowed?: NO. Preserve sources; any supersession requires a verdict and proof of no unique residue."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "H6",
+      "name": "Editorial cadence / journal / edition state",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        62
+      ],
+      "verdict_card": "### H6 — Editorial cadence / journal / edition state\n\n- Members / evidence: data/content-calendar.yaml; roadmap.md; _posts/_logs/essays/_dissertations.\n- Recovered intention: Choose sustainable cadence and execute one evidenced edition after privacy/verification gates; no-public-artifact is valid.\n- Shared root / why grouped: Cadence promises and empty queues lack a shared author-controlled approval/edition contract.\n- Status: active.\n- Finish line / next smallest action: Choose sustainable cadence and execute one evidenced edition after privacy/verification gates; no-public-artifact is valid.\n- Risk if abandoned: Automation publishes prematurely or editorial commitments exceed capacity.\n- Close/delete allowed?: NO. Preserve sources; any supersession requires a verdict and proof of no unique residue."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "H7",
+      "name": "Distribution / community family",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        65
+      ],
+      "verdict_card": "### H7 — Distribution / community family\n\n- Members / evidence: notify-essay-published.yml; distribution contract; ecosystem.yaml; community.md; #21.\n- Recovered intention: Owner-approved channel experiment tied to live content and distinct distribution approval; dedup, consent, response and recovery evidence.\n- Shared root / why grouped: Push-triggered dispatch, canonical content and actual reader receipts are not one verified operation.\n- Status: needs-heal.\n- Finish line / next smallest action: Owner-approved channel experiment tied to live content and distinct distribution approval; dedup, consent, response and recovery evidence.\n- Risk if abandoned: Broken or unwanted notices and unstaffed audience channels.\n- Close/delete allowed?: NO. Preserve sources; any supersession requires a verdict and proof of no unique residue."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "H8",
+      "name": "External-plan / captured instruction reconciliation",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        56
+      ],
+      "verdict_card": "### H8 — External-plan / captured instruction reconciliation\n\n- Members / evidence: CLAUDE.md, GEMINI.md, capture branch F8; referenced plan corpus and pending task.\n- Recovered intention: Append-only ledger with source identity, applicability, custody and unavailable coverage; reconcile removals before any merge.\n- Shared root / why grouped: Generated summaries and captures point to unavailable sources whose current status is not proved.\n- Status: blocked.\n- Finish line / next smallest action: Append-only ledger with source identity, applicability, custody and unavailable coverage; reconcile removals before any merge.\n- Risk if abandoned: Silent loss of local intention or treating old generated context as active authority.\n- Close/delete allowed?: NO. Preserve sources; any supersession requires a verdict and proof of no unique residue."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "H9",
+      "name": "Philosophical editorial residue",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        56
+      ],
+      "verdict_card": "### H9 — Philosophical editorial residue\n\n- Members / evidence: agent manifesto plan, 2026-04-26.\n- Recovered intention: Ask author whether to use it as an editorial experiment; otherwise preserve as historical conceptual input.\n- Shared root / why grouped: Framing/initiatory language is conceptual input without executable acceptance criteria.\n- Status: parked.\n- Finish line / next smallest action: Ask author whether to use it as an editorial experiment; otherwise preserve as historical conceptual input.\n- Risk if abandoned: Loss of author intent or invention of a new product from metaphor.\n- Close/delete allowed?: NO. Preserve sources; any supersession requires a verdict and proof of no unique residue."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "H10",
+      "name": "Research / dissertation integrity family",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        62
+      ],
+      "verdict_card": "### H10 — Research / dissertation integrity family\n\n- Members / evidence: research draft 2026-03-15; docs/sop-doctoral-dissertation.md; chapter collections.\n- Recovered intention: Verify methods, citations, data provenance and authorship; resolve schema/directory differences; never imply awarded degrees or proven findings from a draft.\n- Shared root / why grouped: Draft claims and inconsistent readiness schemas lack one publication evidence/rights/author gate.\n- Status: needs-heal.\n- Finish line / next smallest action: Verify methods, citations, data provenance and authorship; resolve schema/directory differences; never imply awarded degrees or proven findings from a draft.\n- Risk if abandoned: Unsupported empirical or authorship claims reach the public.\n- Close/delete allowed?: NO. Preserve sources; any supersession requires a verdict and proof of no unique residue."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "H11",
+      "name": "Rights / public-private custody",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        59,
+        60
+      ],
+      "verdict_card": "### H11 — Rights / public-private custody\n\n- Members / evidence: LICENSE; README badges; output collections and build exclusions; #22.\n- Recovered intention: Owner-approved class matrix, private destination decision, secret-manager boundary and synthetic output-canary tests.\n- Shared root / why grouped: Code/content/media rights and source/output custody are not explicit; draft labels and public branches are not confidentiality.\n- Status: needs-heal.\n- Finish line / next smallest action: Owner-approved class matrix, private destination decision, secret-manager boundary and synthetic output-canary tests.\n- Risk if abandoned: Accidental exposure or false assumptions about rights or secrecy after publication.\n- Close/delete allowed?: NO. Preserve sources; any supersession requires a verdict and proof of no unique residue."
+    },
+    {
+      "classification": "public",
+      "deletion_authorized": false,
+      "disposition": "retain; reconcile unique residue before closure",
+      "id": "H12",
+      "name": "Continuity / support / sustainable operations",
+      "snapshot_date": "2026-09-13",
+      "source": "https://github.com/organvm-vi-koinonia/public-process/issues/47",
+      "successor_issues": [
+        67,
+        68
+      ],
+      "verdict_card": "### H12 — Continuity / support / sustainable operations\n\n- Members / evidence: SECURITY response promises; community intake; Pages/Netlify metadata; historical archive.\n- Recovered intention: Restore/correction drill, owner map and capacity/cost decision; preserve stable IDs and historical records.\n- Shared root / why grouped: Public commitments lack verified backup, handoff, budget and support-capacity receipts.\n- Status: active.\n- Finish line / next smallest action: Restore/correction drill, owner map and capacity/cost decision; preserve stable IDs and historical records.\n- Risk if abandoned: Unrecoverable archive loss or promises no one can maintain.\n- Close/delete allowed?: NO. Preserve sources; any supersession requires a verdict and proof of no unique residue."
+    }
+  ],
+  "repository": "organvm-vi-koinonia/public-process",
+  "schema_version": 1,
+  "source_issue": 47,
+  "unknown_coverage": [
+    {
+      "id": "U1",
+      "next": "Obtain inventory/attestation without copying private source into public git",
+      "owner": "source owner",
+      "source": "Other local machines and unpushed worktrees",
+      "status": "unavailable"
+    },
+    {
+      "id": "U2",
+      "next": "Reconcile sanitized source IDs and applicable intentions before migration",
+      "owner": "source owner",
+      "source": "Private/external planning collections beyond the earlier targeted search",
+      "status": "unverified"
+    },
+    {
+      "id": "U3",
+      "next": "Attach current sanitized configuration/rights decision receipts",
+      "owner": "repository administrator / rights holder",
+      "source": "Repository administrative settings and rights provenance",
+      "status": "unverified"
+    }
+  ]
+}
