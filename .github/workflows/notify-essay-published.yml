@@ -1,18 +1,14 @@
-name: Notify Essay Published
-
+name: Publication Distribution Approval Status
 on:
-  push:
-    branches: [main]
-    paths:
-      - '_posts/**'
-      - 'essays/**'
-
+  workflow_dispatch:
+permissions:
+  contents: read
 jobs:
-  notify:
-    uses: organvm-vii-kerygma/.github/.github/workflows/notify-kerygma.yml@main
-    with:
-      event_type: essay-published
-      repo_name: public-process
-      channels: mastodon,discord,bluesky,ghost
-    secrets:
-      DISPATCH_TOKEN: ${{ secrets.CROSS_ORG_DISPATCH_TOKEN }}
+  approval-status:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Preserve separate distribution authority
+        run: |
+          echo "A source push or preservation approval is not a channel-distribution receipt."
+          echo "Distribution is parked under issues 60 and 65 until an exact edition, author approval, channel and deduplication receipt are verified."
+          echo "No notification or external dispatch was sent."
