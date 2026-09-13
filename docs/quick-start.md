@@ -47,7 +47,7 @@ Then open `http://127.0.0.1:4001/public-process/`.
 For a local content or documentation change, run:
 
 ```bash
-bundle exec jekyll build --strict_front_matter --future
+JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter --baseurl /public-process
 ```
 
 CI also checks generated data and cross-repo editorial rules. You usually do not

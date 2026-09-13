@@ -62,7 +62,7 @@ expectations.
 
 ```bash
 bundle install
-bundle exec jekyll build --strict_front_matter --future
+JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter --baseurl /public-process
 ```
 
 ---
