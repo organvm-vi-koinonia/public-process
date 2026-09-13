@@ -60,7 +60,7 @@ jobs:
 
       - name: Check data drift
         run: |
-          (cd _pipeline && python -m src.indexer --posts-dir ../_posts/ --logs-dir ../_logs/ --output-dir ../data/)
+          python scripts/refresh_data.py --check
           python scripts/check_data_drift.py
 
       - name: Check internal links
