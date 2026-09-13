@@ -1,77 +1,18 @@
-name: Auto-Merge Eligible PRs
-
+name: Review Automatic Merge Readiness
 on:
   schedule:
-    - cron: "0 6 * * *"  # Daily 06:00 UTC
+    - cron: "0 6 * * *"
   workflow_dispatch:
-
+permissions:
+  contents: read
+  pull-requests: read
 jobs:
-  merge:
+  assess:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v7
-
-      - name: Process auto-merge PRs
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Report deferred automatic merge authority
         run: |
-          echo "Checking for auto-merge eligible PRs..."
-
-          # List open PRs with auto-merge-48h label
-          PRS=$(gh pr list --label "auto-merge-48h" --state open --json number,createdAt,labels --jq '.[]')
-
-          if [ -z "$PRS" ]; then
-            echo "No PRs with auto-merge-48h label found"
-            exit 0
-          fi
-
-          NOW=$(date -u +%s)
-          HOURS_48=$((48 * 60 * 60))
-
-          echo "$PRS" | while IFS= read -r pr_json; do
-            [ -z "$pr_json" ] && continue
-
-            PR_NUM=$(echo "$pr_json" | jq -r '.number')
-            CREATED=$(echo "$pr_json" | jq -r '.createdAt')
-            HAS_HOLD=$(echo "$pr_json" | jq -r '.labels[] | select(.name == "hold") | .name')
-
-            # Skip if hold label present
-            if [ -n "$HAS_HOLD" ]; then
-              echo "PR #$PR_NUM: skipped (hold label)"
-              gh pr comment "$PR_NUM" --body "Auto-merge skipped: \`hold\` label is applied." 2>/dev/null || true
-              continue
-            fi
-
-            # Check age
-            CREATED_TS=$(date -u -j -f "%Y-%m-%dT%H:%M:%SZ" "$CREATED" +%s 2>/dev/null || date -d "$CREATED" +%s 2>/dev/null || echo 0)
-            AGE=$((NOW - CREATED_TS))
-
-            if [ "$AGE" -lt "$HOURS_48" ]; then
-              REMAINING=$(( (HOURS_48 - AGE) / 3600 ))
-              echo "PR #$PR_NUM: too young ($REMAINING hours remaining)"
-              continue
-            fi
-
-            # Check CI status
-            CI_STATUS=$(gh pr checks "$PR_NUM" --json state --jq '[.[] | select(.state != "SUCCESS" and .state != "SKIPPED")] | length')
-
-            if [ "$CI_STATUS" != "0" ] 2>/dev/null; then
-              echo "PR #$PR_NUM: CI not passing"
-              gh pr comment "$PR_NUM" --body "Auto-merge skipped: CI checks not passing." 2>/dev/null || true
-              continue
-            fi
-
-            # Merge
-            echo "PR #$PR_NUM: eligible — merging"
-            if gh pr merge "$PR_NUM" --squash --delete-branch; then
-              echo "PR #$PR_NUM: merged successfully"
-            else
-              echo "PR #$PR_NUM: merge failed"
-              gh pr comment "$PR_NUM" --body "Auto-merge attempted but failed. Manual review needed." 2>/dev/null || true
-            fi
-          done
+          echo "Automatic merging is parked under issue 55."
+          echo "The former age/label/possibly-empty-check rule did not establish exact-head review or publication authority."
+          echo "Use reviewed PR merges; restore autonomous merging only with trusted check identity, current-head approval and adversarial tests."
+          echo "No branch or issue is deleted by this workflow."

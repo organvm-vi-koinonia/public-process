@@ -69,3 +69,6 @@ exclude:
   - .gitignore
   - Gemfile
   - Gemfile.lock
+  - scripts/
+  - tests/
+  - requirements-build.txt
