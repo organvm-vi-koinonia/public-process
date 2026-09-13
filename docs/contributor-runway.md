@@ -49,7 +49,7 @@ quickly in `public-process`.
    - Essay, layout, include, or config change:
 
      ```bash
-     bundle exec jekyll build --strict_front_matter --future
+     JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter --baseurl /public-process
      ```
 
 4. If the issue list has no starter tasks, open the [First Contribution issue template](https://github.com/organvm-vi-koinonia/public-process/issues/new?template=first_contribution.md) and propose a small Markdown, documentation, frontmatter, link, or Jekyll-template cleanup.
@@ -80,7 +80,7 @@ A first contribution should:
 
 - What changed and why.
 - Validation output summary, usually from
-  `bundle exec jekyll build --strict_front_matter --future` (or a note if docs-only).
+  `JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter --baseurl /public-process` (or a note if docs-only).
 - Linked issue with acceptance criteria.
 
 ## Escalation

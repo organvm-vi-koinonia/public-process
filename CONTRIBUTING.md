@@ -85,6 +85,18 @@ Maintainers should label starter tasks `good first issue` and include the releva
 - Architecture/navigation confusion is useful feedback. If you cannot find the
   system diagram you expected, open a Quick Issue and name the path you tried.
 
+## Stewardship entry point
+
+Read [BRANCHES.md](BRANCHES.md), [STATUS.md](STATUS.md), and the
+[requirement coverage](docs/stewardship/requirement-coverage.md) before taking work.
+Claim an existing child issue, recover its intention and follow its dependencies.
+The roadmap is issue #10; do not create a competing roadmap or a new standing lane.
+The maintainer policy in [AGENTS.md](AGENTS.md) applies to repository agents.
+
+Use [the shared release checks](docs/operations/release-gate.md) for current
+validation commands. The checklist is evidence, not permission to mark an
+unfinished acceptance criterion complete.
+
 ## Making a Change
 
 1. Fork the repository on GitHub.
@@ -99,7 +111,7 @@ Maintainers should label starter tasks `good first issue` and include the releva
 5. Commit with a short, imperative message:
 
    ```bash
-   bundle exec jekyll build --strict_front_matter --future
+   JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter --baseurl /public-process
    git commit -m "clarify contributor guide"
    ```
 
@@ -112,7 +124,7 @@ Use the lowest check that actually covers your change:
 | Change type | Local check |
 |-------------|-------------|
 | Root docs such as `README.md`, `CONTRIBUTING.md`, or `docs/*.md` | Preview the Markdown and self-review links. |
-| Essays, logs, layouts, includes, or `_config.yml` | `bundle exec jekyll build --strict_front_matter --future` |
+| Essays, logs, layouts, includes, or `_config.yml` | `JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter --baseurl /public-process` |
 | `_posts/` or `_logs/` content that changes generated indexes | Run the Jekyll build, then expect CI to verify frontmatter, links, and `data/` drift. |
 
 CI also runs the shared `essay-pipeline` and `editorial-standards` repositories
