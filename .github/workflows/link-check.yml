@@ -1,48 +1,38 @@
 name: Link Health Check
-
 on:
   schedule:
-    - cron: "0 8 * * 1"  # Monday 08:00 UTC (weekly)
+    - cron: "0 8 * * 1"
   workflow_dispatch:
-
+permissions:
+  contents: read
 jobs:
   check-links:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
-      - name: Checkout public-process
-        uses: actions/checkout@v7
-
-      - name: Checkout essay-pipeline
-        uses: actions/checkout@v7
+      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7
         with:
           repository: organvm-v-logos/essay-pipeline
           path: _pipeline
-
-      - name: Set up Python
-        uses: actions/setup-python@v7
+          ref: b152a7c942aa73f6b159c6b462616ef14357c871
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
-
-      - name: Install dependencies
-        run: pip install -e _pipeline/
-
-      - name: Check all links
-        working-directory: _pipeline
+      - name: Install pinned dependencies
+        run: pip install -r requirements-build.txt
+      - name: Check all extracted HTTP links
         run: |
-          python -m src.link_checker \
-            --posts-dir ../_posts/ \
-            --logs-dir ../_logs/ \
-            --output ../data/link-report.json \
-            --timeout 15 \
-            --retries 3
-
-      - name: Report broken links
-        if: failure()
-        run: |
-          echo "::warning::Broken links detected — see link-report.json"
-          cat data/link-report.json | python -c "
-          import json, sys
-          r = json.load(sys.stdin)
-          for u in r.get('broken', []):
-            print(f'::error file={u[\"file\"]},line={u[\"line\"]}::{u[\"url\"]} returned {u.get(\"status_code\", u.get(\"error\", \"unknown\"))}')
-          "
+          mkdir -p .link-health
+          python scripts/link_health.py --timeout 15 --retries 2 2>&1 | tee .link-health/checker.log
+      - name: Validate report and retain diagnostics
+        if: always()
+        run: python scripts/summarize_link_report.py .link-health/report.json
+      - name: Retain link-health evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-health-report
+          path: .link-health/
+          include-hidden-files: true
+          if-no-files-found: error
