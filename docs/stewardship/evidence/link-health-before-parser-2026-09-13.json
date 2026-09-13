@@ -1,0 +1,643 @@
+{
+  "summary": {
+    "total": 128,
+    "ok": 74,
+    "redirect": 14,
+    "broken": 19,
+    "timeout": 21,
+    "error": 0
+  },
+  "broken": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Andy_Hunt_(author",
+      "file": "_posts/2026-03-02-two-weeks-and-forty-six-essays.md",
+      "line": 116,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Antifragile_(book",
+      "file": "_posts/2026-03-05-the-autonomous-sprint.md",
+      "line": 23,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Antifragile_(book",
+      "file": "_posts/2026-03-11-the-organ-chain-reset.md",
+      "line": 19,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Atom_(web_standard",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 34,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Atom_(web_standard",
+      "file": "_posts/2026-03-02-two-weeks-and-forty-six-essays.md",
+      "line": 42,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Chris_Anderson_(writer",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 83,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Dave_Thomas_(programmer",
+      "file": "_posts/2026-03-02-two-weeks-and-forty-six-essays.md",
+      "line": 116,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Diana_Larsen",
+      "file": "_posts/2026-03-02-two-weeks-and-forty-six-essays.md",
+      "line": 122,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Out_of_the_Crisis",
+      "file": "_posts/2026-03-05-the-autonomous-sprint.md",
+      "line": 22,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Social_Systems_(book)",
+      "file": "_posts/2026-02-24-community-infrastructure-for-one.md",
+      "line": 21,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Steven_Johnson_(author",
+      "file": "_posts/2026-02-24-community-infrastructure-for-one.md",
+      "line": 117,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/The_Data_Warehouse_Toolkit",
+      "file": "_posts/2026-02-27-writing-as-system-architecture.md",
+      "line": 23,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/The_Long_Tail_(book",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 83,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/The_Reflective_Practitioner",
+      "file": "_posts/2026-02-27-writing-as-system-architecture.md",
+      "line": 20,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Thinking_in_Systems:_A_Primer",
+      "file": "_posts/2026-03-05-the-autonomous-sprint.md",
+      "line": 17,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Tribes_(Seth_Godin_book)",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 22,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://github.com/adenhq/hive/issues/6613",
+      "file": "_posts/2026-03-21-how-governance-taught-agents-to-version.md",
+      "line": 38,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process/discussions",
+      "file": "_posts/2026-02-10-governance-as-creative-practice.md",
+      "line": 135,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process/discussions",
+      "file": "_posts/2026-02-10-how-we-orchestrate-eight-organs.md",
+      "line": 274,
+      "status": "broken",
+      "status_code": 404
+    },
+    {
+      "url": "https://medium.com/matter/the-web-we-have-to-save-2eb1fe15a426",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 26,
+      "status": "broken",
+      "status_code": 403
+    },
+    {
+      "url": "https://monteiro.studio/",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 130,
+      "status": "broken",
+      "status_code": 502
+    },
+    {
+      "url": "https://nadiaeghbal.com/",
+      "file": "_posts/2026-02-24-community-infrastructure-for-one.md",
+      "line": 80,
+      "status": "broken",
+      "status_code": 502
+    },
+    {
+      "url": "https://anildash.com/",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 38,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://anildash.com/2012/12/13/the_web_we_lost/",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 25,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://bsky.app/",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 97,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions",
+      "file": "_posts/2026-02-27-writing-as-system-architecture.md",
+      "line": 18,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://craphound.com/",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 48,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://datatracker.ietf.org/doc/html/rfc4287",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 24,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions",
+      "file": "_posts/2026-03-05-the-autonomous-sprint.md",
+      "line": 84,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://github.com/4444J99/peer-audited--behavioral-blockchain",
+      "file": "_logs/2026-09-11-weekly-accomplishments-preservation.md",
+      "line": 54,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://indieweb.org/POSSE",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 18,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://jekyllrb.com/",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 34,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://jekyllrb.com/",
+      "file": "_posts/2026-02-27-writing-as-system-architecture.md",
+      "line": 45,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://jekyllrb.com/",
+      "file": "_posts/2026-03-02-two-weeks-and-forty-six-essays.md",
+      "line": 42,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://jekyllrb.com/",
+      "file": "_posts/2026-03-05-the-autonomous-sprint.md",
+      "line": 92,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://martinfowler.com/articles/continuousIntegration.html",
+      "file": "_posts/2026-02-27-writing-as-system-architecture.md",
+      "line": 22,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://pages.github.com/",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 34,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://paulgraham.com/",
+      "file": "_posts/2026-03-02-two-weeks-and-forty-six-essays.md",
+      "line": 38,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://pragprog.com/titles/dlret/agile-retrospectives/",
+      "file": "_posts/2026-03-02-two-weeks-and-forty-six-essays.md",
+      "line": 22,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://seths.blog/",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 87,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://tantek.com/",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 19,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://www.estherderby.com/",
+      "file": "_posts/2026-03-02-two-weeks-and-forty-six-essays.md",
+      "line": 122,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://www.goatcounter.com/",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 118,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://www.michaelnygard.com/",
+      "file": "_posts/2026-02-27-writing-as-system-architecture.md",
+      "line": 53,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://www.rssboard.org/rss-specification",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 23,
+      "status": "timeout",
+      "error": "timed out"
+    },
+    {
+      "url": "https://www.ruinedby.design/",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 27,
+      "status": "timeout",
+      "error": "timed out"
+    }
+  ],
+  "redirects": [
+    {
+      "url": "https://calnewport.com/deep-work/",
+      "file": "_posts/2026-03-02-two-weeks-and-forty-six-essays.md",
+      "line": 21,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://calnewport.com/deep-work-and-the-good-life/"
+    },
+    {
+      "url": "https://github.com/organvm-i-theoria/narratological-algorithmic-lenses",
+      "file": "_posts/2026-04-25-recursive-engines-at-scale.md",
+      "line": 99,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-ii-poiesis/narratological-algorithmic-lenses"
+    },
+    {
+      "url": "https://github.com/organvm-i-theoria/recursive-engine--generative-entity",
+      "file": "_posts/2026-02-13-the-promotion-pipeline.md",
+      "line": 226,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm/recursive-engine--generative-entity"
+    },
+    {
+      "url": "https://github.com/organvm-i-theoria/recursive-engine--generative-entity",
+      "file": "_posts/2026-02-14-promotion-pipeline.md",
+      "line": 226,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm/recursive-engine--generative-entity"
+    },
+    {
+      "url": "https://github.com/organvm-i-theoria/recursive-engine--generative-entity",
+      "file": "_posts/2026-02-16-how-to-think-about-autonomous-systems.md",
+      "line": 126,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm/recursive-engine--generative-entity"
+    },
+    {
+      "url": "https://github.com/organvm-i-theoria/recursive-engine--generative-entity",
+      "file": "_posts/2026-02-16-why-the-organ-model-separates-commerce-from-theory.md",
+      "line": 115,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm/recursive-engine--generative-entity"
+    },
+    {
+      "url": "https://github.com/organvm-i-theoria/recursive-engine--generative-entity",
+      "file": "_posts/2026-04-25-recursive-engines-at-scale.md",
+      "line": 191,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm/recursive-engine--generative-entity"
+    },
+    {
+      "url": "https://github.com/organvm-i-theoria/recursive-engine--generative-entity",
+      "file": "_posts/2026-04-28-generative-music-case-study.md",
+      "line": 159,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm/recursive-engine--generative-entity"
+    },
+    {
+      "url": "https://github.com/organvm-i-theoria/recursive-engine--generative-entity",
+      "file": "_posts/2026-05-07-promotion-pipeline.md",
+      "line": 241,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm/recursive-engine--generative-entity"
+    },
+    {
+      "url": "https://github.com/organvm-i-theoria/recursive-engine--generative-entity",
+      "file": "_posts/2026-05-10-how-to-think-about-autonomous-systems.md",
+      "line": 140,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm/recursive-engine--generative-entity"
+    },
+    {
+      "url": "https://github.com/organvm-i-theoria/recursive-engine--generative-entity",
+      "file": "_posts/2026-05-13-why-the-organ-model-separates-commerce-from-theory.md",
+      "line": 129,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm/recursive-engine--generative-entity"
+    },
+    {
+      "url": "https://github.com/organvm-ii-poiesis/performance-sdk",
+      "file": "_posts/2026-04-28-generative-music-case-study.md",
+      "line": 159,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm/performance-sdk"
+    },
+    {
+      "url": "https://github.com/organvm-iv-taxis/agentic-titan",
+      "file": "_posts/2026-02-16-how-to-think-about-autonomous-systems.md",
+      "line": 126,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-iii-ergon/agentic-titan"
+    },
+    {
+      "url": "https://github.com/organvm-iv-taxis/agentic-titan",
+      "file": "_posts/2026-05-10-how-to-think-about-autonomous-systems.md",
+      "line": 140,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-iii-ergon/agentic-titan"
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/editorial-standards",
+      "file": "_posts/2026-02-27-writing-as-system-architecture.md",
+      "line": 51,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm/editorial-standards"
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process",
+      "file": "_posts/2026-02-13-the-promotion-pipeline.md",
+      "line": 224,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-vi-koinonia/public-process"
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process",
+      "file": "_posts/2026-02-13-why-ai-function-calling-needs-ontological-grounding.md",
+      "line": 256,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-vi-koinonia/public-process"
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process",
+      "file": "_posts/2026-02-14-promotion-pipeline.md",
+      "line": 224,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-vi-koinonia/public-process"
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process",
+      "file": "_posts/2026-02-16-governance-frameworks-for-artists.md",
+      "line": 143,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-vi-koinonia/public-process"
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process",
+      "file": "_posts/2026-02-16-how-to-think-about-autonomous-systems.md",
+      "line": 124,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-vi-koinonia/public-process"
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process",
+      "file": "_posts/2026-02-16-promotions-in-practice.md",
+      "line": 121,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-vi-koinonia/public-process"
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process",
+      "file": "_posts/2026-02-16-why-the-organ-model-separates-commerce-from-theory.md",
+      "line": 113,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-vi-koinonia/public-process"
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 46,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-vi-koinonia/public-process"
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process",
+      "file": "_posts/2026-04-25-recursive-engines-at-scale.md",
+      "line": 189,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-vi-koinonia/public-process"
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process",
+      "file": "_posts/2026-04-28-generative-music-case-study.md",
+      "line": 157,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-vi-koinonia/public-process"
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process",
+      "file": "_posts/2026-05-01-aetheria-rpg-post-mortem.md",
+      "line": 151,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-vi-koinonia/public-process"
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process",
+      "file": "_posts/2026-05-04-promotions-in-practice.md",
+      "line": 139,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-vi-koinonia/public-process"
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process",
+      "file": "_posts/2026-05-07-promotion-pipeline.md",
+      "line": 239,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-vi-koinonia/public-process"
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process",
+      "file": "_posts/2026-05-10-how-to-think-about-autonomous-systems.md",
+      "line": 138,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-vi-koinonia/public-process"
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process",
+      "file": "_posts/2026-05-13-why-the-organ-model-separates-commerce-from-theory.md",
+      "line": 127,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-vi-koinonia/public-process"
+    },
+    {
+      "url": "https://github.com/organvm-v-logos/public-process",
+      "file": "_posts/2026-05-16-governance-frameworks-for-artists.md",
+      "line": 158,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-vi-koinonia/public-process"
+    },
+    {
+      "url": "https://github.com/organvm-vi-koinonia/adaptive-personal-syllabus",
+      "file": "_posts/2026-02-24-community-infrastructure-for-one.md",
+      "line": 54,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm/adaptive-personal-syllabus"
+    },
+    {
+      "url": "https://github.com/organvm-vi-koinonia/koinonia-db",
+      "file": "_posts/2026-02-24-community-infrastructure-for-one.md",
+      "line": 58,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm/koinonia-db"
+    },
+    {
+      "url": "https://github.com/organvm-vi-koinonia/salon-archive",
+      "file": "_posts/2026-02-24-community-infrastructure-for-one.md",
+      "line": 50,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm/salon-archive"
+    },
+    {
+      "url": "https://github.com/organvm-vii-kerygma/announcement-templates",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 55,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm/announcement-templates"
+    },
+    {
+      "url": "https://github.com/organvm-vii-kerygma/distribution-strategy",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 54,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm-iv-taxis/distribution-strategy"
+    },
+    {
+      "url": "https://github.com/organvm-vii-kerygma/kerygma-pipeline",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 52,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm/kerygma-pipeline"
+    },
+    {
+      "url": "https://github.com/organvm-vii-kerygma/social-automation",
+      "file": "_posts/2026-02-21-the-distribution-problem.md",
+      "line": 53,
+      "status": "redirect",
+      "status_code": 301,
+      "redirect_url": "https://github.com/organvm/social-automation"
+    }
+  ],
+  "state": "unhealthy",
+  "source_sha": "6f23446cd67fb3b926315dfd209f666dcfa38b60",
+  "coverage": "HTTP URLs extracted from top-level posts and logs; relative local links not covered"
+}

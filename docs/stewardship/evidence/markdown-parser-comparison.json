@@ -1,0 +1,22 @@
+{
+  "old_unique": 128,
+  "new_unique": 127,
+  "removed": [
+    "https://en.wikipedia.org/wiki/Andy_Hunt_(author",
+    "https://en.wikipedia.org/wiki/Antifragile_(book",
+    "https://en.wikipedia.org/wiki/Atom_(web_standard",
+    "https://en.wikipedia.org/wiki/Chris_Anderson_(writer",
+    "https://en.wikipedia.org/wiki/Dave_Thomas_(programmer",
+    "https://en.wikipedia.org/wiki/Steven_Johnson_(author",
+    "https://en.wikipedia.org/wiki/The_Long_Tail_(book"
+  ],
+  "added": [
+    "https://en.wikipedia.org/wiki/Andy_Hunt_(author)",
+    "https://en.wikipedia.org/wiki/Antifragile_(book)",
+    "https://en.wikipedia.org/wiki/Atom_(web_standard)",
+    "https://en.wikipedia.org/wiki/Chris_Anderson_(writer)",
+    "https://en.wikipedia.org/wiki/Dave_Thomas_(programmer)",
+    "https://en.wikipedia.org/wiki/Steven_Johnson_(author)"
+  ],
+  "scope": "Markdown destinations in bodies and YAML strings; excludes code; includes images/autolinks/references"
+}
