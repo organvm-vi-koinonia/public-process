@@ -42,6 +42,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements-build.txt
 
+      - name: Check public source boundary
+        run: python scripts/check_public_output.py source
+
       - name: Validate frontmatter
         working-directory: _pipeline
         run: |
@@ -73,6 +76,9 @@ jobs:
         run: bundle exec jekyll build --strict_front_matter --baseurl "/public-process"
         env:
           JEKYLL_ENV: production
+
+      - name: Check public artifact boundary
+        run: python scripts/check_public_output.py output
 
       - name: Record source and artifact manifest
         run: python scripts/release_manifest.py
