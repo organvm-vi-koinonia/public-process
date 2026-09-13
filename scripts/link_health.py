@@ -9,7 +9,8 @@ import httpx
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / '_pipeline'))
-from src.link_checker import Report, UrlResult, extract_urls, generate_report
+from src.link_checker import Report, UrlResult, generate_report
+from markdown_links import extract_urls
 
 
 def check_one(url, client, timeout=15, retries=2):
@@ -65,7 +66,7 @@ def run(output, timeout=15, retries=2):
         payload.update(state='checker-error', diagnostic=f'{type(error).__name__}: {error}')
         code = 1
     payload['source_sha'] = subprocess.check_output(['git', '-C', str(ROOT), 'rev-parse', 'HEAD'], text=True).strip()
-    payload['coverage'] = 'HTTP URLs extracted from top-level posts and logs; relative local links not covered'
+    payload['coverage'] = 'Markdown HTTP links/images in post/log bodies and YAML strings; block-start lines (metadata line 1); plaintext/relative links not covered'
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(payload, indent=2) + '\n')
     return code

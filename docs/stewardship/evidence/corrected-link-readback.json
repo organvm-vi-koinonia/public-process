@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-13",
+  "scope": "six corrected destinations only; not whole-corpus health",
+  "results": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Andy_Hunt_(author)",
+      "status": "broken",
+      "status_code": 403
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Antifragile_(book)",
+      "status": "broken",
+      "status_code": 403
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Atom_(web_standard)",
+      "status": "broken",
+      "status_code": 403
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Chris_Anderson_(writer)",
+      "status": "broken",
+      "status_code": 403
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Dave_Thomas_(programmer)",
+      "status": "broken",
+      "status_code": 403
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Steven_Johnson_(author)",
+      "status": "broken",
+      "status_code": 403
+    }
+  ]
+}
