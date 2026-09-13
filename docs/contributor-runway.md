@@ -52,7 +52,7 @@ quickly in `public-process`.
      bundle exec jekyll build --strict_front_matter --future
      ```
 
-4. If the issue list has no starter tasks, open the [First Contribution issue template](https://github.com/organvm/public-process/issues/new?template=first_contribution.md) and propose a small Markdown, documentation, frontmatter, link, or Jekyll-template cleanup.
+4. If the issue list has no starter tasks, open the [First Contribution issue template](https://github.com/organvm-vi-koinonia/public-process/issues/new?template=first_contribution.md) and propose a small Markdown, documentation, frontmatter, link, or Jekyll-template cleanup.
 
 ## Starter Issue Labels
 
