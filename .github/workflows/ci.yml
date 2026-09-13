@@ -1,121 +1,12 @@
 name: Public Process CI
-
 on:
   push:
-    branches: [ main, master, develop ]
+    branches: [main]
   pull_request:
-    branches: [ main, master, develop ]
+    branches: [main]
   workflow_dispatch:
-
+permissions:
+  contents: read
 jobs:
   validate:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout public-process
-        uses: actions/checkout@v7
-
-      - name: Checkout essay-pipeline
-        uses: actions/checkout@v7
-        with:
-          repository: organvm-v-logos/essay-pipeline
-          path: _pipeline
-
-      - name: Checkout editorial-standards
-        uses: actions/checkout@v7
-        with:
-          repository: organvm-v-logos/editorial-standards
-          path: _standards
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.3"
-          bundler-cache: true
-
-      - name: Build Jekyll site
-        run: bundle exec jekyll build --strict_front_matter --future
-
-      - name: Set up Python
-        uses: actions/setup-python@v7
-        with:
-          python-version: "3.12"
-
-      - name: Install dependencies
-        run: pip install pyyaml httpx
-
-      - name: Validate frontmatter
-        working-directory: _pipeline
-        run: |
-          python -m src.validator \
-            --posts-dir ../_posts/ \
-            --schema ../_standards/schemas/frontmatter-schema.yaml
-
-      - name: Check data drift
-        working-directory: _pipeline
-        run: |
-          python -m src.indexer \
-            --posts-dir ../_posts/ \
-            --logs-dir ../_logs/ \
-            --output-dir ../data/
-          cd ..
-          python - <<'PY'
-          import json
-          import subprocess
-          import sys
-          from pathlib import Path
-
-          changed = subprocess.check_output(
-              ["git", "diff", "--name-only", "--", "data/"],
-              text=True,
-          ).splitlines()
-
-          semantic_drift = []
-          timestamp_only = []
-          for name in changed:
-              path = Path(name)
-              if path.suffix != ".json" or not path.exists():
-                  semantic_drift.append(name)
-                  continue
-              try:
-                  before = json.loads(
-                      subprocess.check_output(["git", "show", f"HEAD:{name}"], text=True)
-                  )
-                  after = json.loads(path.read_text())
-              except Exception:
-                  semantic_drift.append(name)
-                  continue
-              before.pop("updated", None)
-              after.pop("updated", None)
-              if before == after:
-                  timestamp_only.append(name)
-              else:
-                  semantic_drift.append(name)
-
-          if semantic_drift:
-              print("::error::Data files are out of date — run the indexer locally and commit the result")
-              subprocess.run(["git", "diff", "--stat", "--", *semantic_drift], check=False)
-              sys.exit(1)
-          if timestamp_only:
-              print("::notice::Data drift is limited to generated updated timestamps")
-          else:
-              print("::notice::Data files are up to date")
-          PY
-
-      - name: Check internal links
-        working-directory: _pipeline
-        run: |
-          python -m src.link_checker \
-            --posts-dir ../_posts/ \
-            --logs-dir ../_logs/ \
-            --internal-only \
-            --output /dev/null
-
-      - name: Validate structure
-        run: |
-          echo "README check:"
-          test -f "README.md" && echo "::notice::README.md found" || echo "::warning::No README.md found"
-          echo "License check:"
-          test -f "LICENSE" && echo "::notice::License file found" || echo "::warning::No license file found"
-
-      - name: Success
-        run: echo "::notice::Public Process CI passed"
+    uses: ./.github/workflows/validate-publication.yml

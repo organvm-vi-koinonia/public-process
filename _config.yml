@@ -69,3 +69,10 @@ exclude:
   - .gitignore
   - Gemfile
   - Gemfile.lock
+  - scripts/
+  - tests/
+  - requirements-build.txt
+  - private/
+  - drafts/
+  - _private/
+  - _drafts/

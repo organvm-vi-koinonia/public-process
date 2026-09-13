@@ -1,76 +1,82 @@
 name: Weekly Data Refresh
-
 on:
   schedule:
-    - cron: "0 6 * * 0"  # Sunday 06:00 UTC
+    - cron: "0 6 * * 0"
   workflow_dispatch:
-
+permissions:
+  contents: read
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
 jobs:
   refresh:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
+      pull-requests: write
     steps:
-      - name: Checkout public-process
-        uses: actions/checkout@v7
-
-      - name: Checkout essay-pipeline
-        uses: actions/checkout@v7
+      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7
         with:
           repository: organvm-v-logos/essay-pipeline
-          path: essay-pipeline
-
-      - name: Checkout editorial-standards
-        uses: actions/checkout@v7
+          path: _pipeline
+          ref: b152a7c942aa73f6b159c6b462616ef14357c871
+      - uses: actions/checkout@v7
         with:
           repository: organvm-v-logos/editorial-standards
-          path: editorial-standards
-
-      - name: Set up Python
-        uses: actions/setup-python@v7
+          path: _standards
+          ref: d0488a7208d976daa32486e223b6656105a321cd
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
-
-      - name: Install essay-pipeline
-        run: pip install -e essay-pipeline/
-
-      - name: Validate essays
-        working-directory: essay-pipeline
+      - name: Install pinned dependencies
+        run: pip install -r requirements-build.txt
+      - name: Validate and regenerate twice
+        run: python scripts/refresh_data.py
+      - name: Preserve refresh receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: refresh-receipt
+          path: .refresh-receipt.json
+          include-hidden-files: true
+          if-no-files-found: warn
+      - name: Propose reviewed data update
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python -m src.validator \
-            --posts-dir ../_posts/ \
-            --schema ../editorial-standards/schemas/frontmatter-schema.yaml
-
-      - name: Validate logs
-        working-directory: essay-pipeline
-        run: |
-          if [ -d "../_logs" ] && [ -n "$(ls -A ../_logs/*.md 2>/dev/null)" ]; then
-            python -m src.validator \
-              --posts-dir ../_logs/ \
-              --schema ../editorial-standards/schemas/log-schema.yaml \
-              --content-type log
-          else
-            echo "No logs to validate"
+          set -euo pipefail
+          git add -- data/
+          if git diff --cached --quiet; then
+            echo "No semantic data changes; reviewed timestamps retained."
+            exit 0
           fi
-
-      - name: Regenerate data artifacts
-        working-directory: essay-pipeline
-        run: |
-          LOGS_ARG=""
-          if [ -d "../_logs" ] && [ -n "$(ls -A ../_logs/*.md 2>/dev/null)" ]; then
-            LOGS_ARG="--logs-dir ../_logs/"
+          BRANCH="work/heal/53-data-refresh"
+          EXISTING=$(gh pr list --head "$BRANCH" --state open --json number --jq 'length')
+          if [ "$EXISTING" != "0" ]; then
+            echo "An existing refresh proposal owns this family; inspect its receipt before updating."
+            exit 0
           fi
-
-          python -m src.indexer \
-            --posts-dir ../_posts/ \
-            $LOGS_ARG \
-            --output-dir ../data/
-
-      - name: Commit refreshed data
-        run: |
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
+            echo "A retained branch needs a stewardship verdict; not overwriting it."
+            exit 1
+          fi
+          git switch -c "$BRANCH"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git diff --staged --quiet || git commit -m "chore: refresh data artifacts $(date -u +%Y-%m-%d)"
-          git push
+          git commit -m "chore: propose validated data refresh (#53)"
+          git push origin "HEAD:refs/heads/$BRANCH"
+          python - <<'PYBODY'
+          import json
+          from pathlib import Path
+          r = json.loads(Path('.refresh-receipt.json').read_text())
+          Path('/tmp/refresh-pr-body.md').write_text(
+              'Related to #53. Validated essays/logs and repeated the pinned indexer with semantic equality.\n\n'
+              + 'Source SHA: `' + r['source_sha'] + '`\n\n'
+              + 'Changed data: ' + ', '.join(r['changed']) + '\n\n'
+              + 'This is a data proposal, not live-source ingestion or publication authority. '
+              + 'GitHub-token PR creation may not trigger CI; run the normal exact-head CI before merge. '
+              + 'No auto-merge or branch deletion.\n')
+          PYBODY
+          gh pr create --base main --head "$BRANCH" --title "chore: propose validated data refresh" --body-file /tmp/refresh-pr-body.md

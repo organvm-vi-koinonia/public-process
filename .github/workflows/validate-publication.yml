@@ -1,0 +1,88 @@
+name: Validate Publication
+on:
+  workflow_call:
+    inputs:
+      upload_pages:
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout public-process
+        uses: actions/checkout@v7
+
+      - name: Checkout essay-pipeline
+        uses: actions/checkout@v7
+        with:
+          repository: organvm-v-logos/essay-pipeline
+          path: _pipeline
+          ref: b152a7c942aa73f6b159c6b462616ef14357c871
+
+      - name: Checkout editorial-standards
+        uses: actions/checkout@v7
+        with:
+          repository: organvm-v-logos/editorial-standards
+          path: _standards
+          ref: d0488a7208d976daa32486e223b6656105a321cd
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements-build.txt
+
+      - name: Check public source boundary
+        run: python scripts/check_public_output.py source
+
+      - name: Validate frontmatter
+        working-directory: _pipeline
+        run: |
+          python -m src.validator \
+            --posts-dir ../_posts/ \
+            --schema ../_standards/schemas/frontmatter-schema.yaml
+
+      - name: Validate log frontmatter
+        run: python scripts/validate_logs.py
+
+      - name: Test release contracts
+        run: python -m unittest discover -s tests -v
+
+      - name: Check data drift
+        run: |
+          python scripts/refresh_data.py --check
+          python scripts/check_data_drift.py
+
+      - name: Check internal links
+        working-directory: _pipeline
+        run: |
+          python -m src.link_checker \
+            --posts-dir ../_posts/ \
+            --logs-dir ../_logs/ \
+            --internal-only \
+            --output /dev/null
+
+      - name: Build production artifact
+        run: bundle exec jekyll build --strict_front_matter --baseurl "/public-process"
+        env:
+          JEKYLL_ENV: production
+
+      - name: Check public artifact boundary
+        run: python scripts/check_public_output.py output
+
+      - name: Record source and artifact manifest
+        run: python scripts/release_manifest.py
+
+      - name: Upload validated Pages artifact
+        if: inputs.upload_pages
+        uses: actions/upload-pages-artifact@v5

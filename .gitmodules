@@ -1,0 +1,6 @@
+[submodule "_pipeline"]
+	path = _pipeline
+	url = https://github.com/organvm-v-logos/essay-pipeline.git
+[submodule "_standards"]
+	path = _standards
+	url = https://github.com/organvm-v-logos/editorial-standards.git
