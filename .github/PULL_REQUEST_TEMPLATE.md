@@ -1,33 +1,31 @@
-## Summary
+## Intention and owning issue
 
-<!-- What does this PR do? Why is it needed? -->
+<!-- Link the child issue/family successor; recover why the work exists. One intention per PR. -->
 
-## Changes
+## Scope and branch ownership
 
-<!-- List the key changes made in this PR -->
+<!-- Base/head SHA, working branch, allowed paths/output groups, dependency receipts.
+     Follow BRANCHES.md; identify executor and reviewer, or say review is unfilled. -->
 
--
+## Changes and evidence
 
-## Related Issues
+<!-- What behavior changed, why, and which acceptance criteria are now proved? -->
 
-<!-- Link related issues: Fixes #123, Relates to #456 -->
+## Verification
 
-## Testing
+- [ ] Relevant checks from docs/operations/release-gate.md pass
+- [ ] Exact-head CI receipt linked; skipped/unavailable checks identified
+- [ ] Applicable corpus, data drift, public-output and canonical checks pass
+- [ ] Deployment/live evidence identified separately where required
+- [ ] No secrets, private source, unsupported claims or unapproved creative text
 
-<!-- How did you test these changes? Mark unavailable checks as N/A. -->
+## Family residue and closure verdict
 
-- [ ] Docs-only change previewed and self-reviewed
-- [ ] `bundle exec jekyll build --strict_front_matter --future` passes for content/layout/config changes
-- [ ] Full workspace validation passes if available (`../validate.sh`)
-- [ ] CI data-drift checks considered for `_posts/` or `_logs/` changes
-- [ ] New tests added (if applicable)
-- [ ] Manual testing performed
+<!-- List linked members. What unique commits/comments/intention remain?
+     Before closure: intention + evidence + successor + why no unique work is lost.
+     Do not close an issue merely because this PR exists or its local tests pass. -->
 
-## Checklist
+## Remaining gates / handoff
 
-- [ ] Code follows the project's style guidelines
-- [ ] Self-review completed
-- [ ] Documentation updated (if applicable)
-- [ ] No secrets or credentials included
-- [ ] Data artifacts regenerated and committed when `_posts/` or `_logs/` changed
-- [ ] Related issue linked with explicit success criteria
+<!-- State real blockers, next owner/action, recovery boundary and parked branch/head.
+     Preserve publication/distribution authority separately from engineering approval. -->

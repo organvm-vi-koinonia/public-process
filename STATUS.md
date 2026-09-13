@@ -3,6 +3,9 @@
 Evidence date: 2026-09-13. Scope: this repository only. Roadmap: [#10](https://github.com/organvm-vi-koinonia/public-process/issues/10).
 This is an implementation checkpoint, not an Omega-complete or fully green external-link claim.
 
+For the full instruction-to-artifact mapping, see
+[stewardship requirement coverage](docs/stewardship/requirement-coverage.md).
+
 ## Implemented and merged
 
 | Intention | PR | Verified result |
